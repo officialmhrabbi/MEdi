@@ -1,0 +1,70 @@
+:root {
+  --color-primary: #2F7DF4;
+  --color-primary-dark: #1B5FD1;
+  --color-primary-light: #EAF2FE;
+
+  --color-secondary: #12B76A;
+  --color-secondary-dark: #0C8F53;
+
+  --gradient-brand: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+
+  --color-heading: #101828;
+  --color-text: #475467;
+  --color-text-muted: #667085;
+  --color-white: #FFFFFF;
+
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8FAFC;
+  --color-bg-soft-blue: #EEF4FF;
+
+  --color-border: #E4E7EC;
+  --color-border-light: #F0F2F5;
+
+  --tint-blue: #E9F1FF;
+  --tint-purple: #F3ECFC;
+  --tint-teal: #E7F9F4;
+  --tint-pink: #FDECEF;
+  --tint-orange: #FDF1E2;
+
+  --color-success: #12B76A;
+  --color-warning: #F79009;
+  --color-error: #F04438;
+  --color-star: #FDB022;
+
+  --font-family-base: 'Poppins', 'Segoe UI', Arial, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 2.75rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+
+  --container-width: 1200px;
+  --navbar-height: 72px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 8px 24px rgba(16, 24, 40, 0.12);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+}
