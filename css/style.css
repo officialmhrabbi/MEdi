@@ -280,20 +280,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-  background: linear-gradient(115deg, #EAFBF2 0%, #F5FAFF 45%, #FFFFFF 80%);
-  padding-block: var(--space-2xl);
+  position: relative;
   overflow: hidden;
+  padding-block: 5rem;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/hero-doctor.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  filter: blur(6px) saturate(0.9);
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(234, 242, 254, 0.9) 0%, rgba(255, 255, 255, 0.93) 45%, rgba(231, 249, 244, 0.9) 100%);
 }
 
 .hero__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2xl);
+  position: relative;
+  z-index: 10;
 }
 
 .hero__content {
-  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 56rem;
+  margin-inline: auto;
 }
 
 .badge {
@@ -341,67 +362,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-md);
 }
 
-.hero__media {
-  position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 420px;
-}
-
-.hero__image {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  object-position: top center;
-  box-shadow: var(--shadow-lg);
-}
-
-.hero__blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.55;
-  z-index: 0;
-}
-
-.hero__blob--blue {
-  width: 280px;
-  height: 280px;
-  top: -20px;
-  right: 40px;
-  background-color: var(--color-primary-light);
-}
-
-.hero__blob--green {
-  width: 220px;
-  height: 220px;
-  bottom: -10px;
-  left: 20px;
-  background-color: var(--tint-teal);
-}
-
-@media (max-width: 992px) {
-  .hero__container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero__content {
-    max-width: 100%;
-  }
-
-  .hero__subtitle {
-    margin-inline: auto;
-  }
-
-  .hero__actions {
-    justify-content: center;
+@media (min-width: 768px) {
+  .hero {
+    padding-block: 8rem;
   }
 }
 
@@ -413,5 +376,6 @@ h1, h2, h3, h4, h5, h6 {
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
 }
