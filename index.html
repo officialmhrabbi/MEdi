@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UpCare Mediconnect is an AI-powered healthcare platform offering telehealth, mental health support, childcare, and in-home care for the whole family." />
+  <meta name="theme-color" content="#2F7DF4" />
   <title>UpCare Mediconnect | AI-Powered Healthcare Platform</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,10 +15,14 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <link rel="preload" as="image" href="assets/images/hero-doctor.jpg" />
+
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <header class="navbar">
     <div class="container">
@@ -27,11 +35,17 @@
       <nav class="navbar__menu" id="navbarMenu">
 
         <ul class="navbar__links">
-          <li><a href="#" class="is-active">Home</a></li>
-          <li>
-            <a href="#">
+          <li><a href="#" class="is-active" aria-current="page">Home</a></li>
+          <li class="navbar__dropdown">
+            <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
               Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-            </a>
+            </button>
+            <ul class="navbar__dropdown-menu" id="servicesMenu">
+              <li><a href="#services">Healthcare & Telehealth</a></li>
+              <li><a href="#services">Mental Health & Teletherapy</a></li>
+              <li><a href="#services">Childcare & ABA</a></li>
+              <li><a href="#services">Adult & Home Care</a></li>
+            </ul>
           </li>
           <li>
             <a href="#" class="navbar__ai-pill">
@@ -41,9 +55,17 @@
         </ul>
 
         <div class="navbar__actions">
-          <a href="#" class="navbar__lang">
-            <i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-          </a>
+          <div class="navbar__dropdown">
+            <button type="button" class="navbar__lang" aria-expanded="false" aria-controls="langMenu">
+              <i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </button>
+            <ul class="navbar__dropdown-menu navbar__dropdown-menu--right" id="langMenu">
+              <li><a href="#">English</a></li>
+              <li><a href="#">বাংলা</a></li>
+              <li><a href="#">हिन्दी</a></li>
+              <li><a href="#">العربية</a></li>
+            </ul>
+          </div>
           <a href="#" class="btn btn-primary">
             Book Care <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -54,7 +76,7 @@
 
       </nav>
 
-      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-controls="navbarMenu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -63,12 +85,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <section class="hero">
-      <div class="hero__bg"></div>
-      <div class="hero__overlay"></div>
-
       <div class="container hero__container">
         <div class="hero__content">
           <span class="badge">
@@ -88,15 +107,331 @@
             <a href="#" class="btn btn-primary btn-lg">
               Book Care Now <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="#" class="btn btn-outline btn-lg">
+            <a href="#services" class="btn btn-outline btn-lg">
               <i class="fa-solid fa-magnifying-glass"></i> Explore Services
             </a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__blob hero__blob--blue"></div>
+          <div class="hero__blob hero__blob--green"></div>
+          <img src="assets/images/hero-doctor.jpg" width="440" height="550" alt="Smiling doctor in a white coat with a stethoscope" class="hero__image" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why Choose UpCare?</h2>
+          <p>Experience the future of healthcare with our comprehensive, AI-powered platform.</p>
+        </div>
+
+        <div class="why-choose__grid">
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--blue"><i class="fa-solid fa-robot"></i></div>
+            <h3>AI Assistance</h3>
+            <p>Smart matching and 24/7 AI support for better care decisions.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--green"><i class="fa-solid fa-globe"></i></div>
+            <h3>Multilingual</h3>
+            <p>Care in English, Bengali, Hindi, and Arabic for your comfort.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--blue"><i class="fa-solid fa-house-medical"></i></div>
+            <h3>In-Home & Virtual</h3>
+            <p>Flexible care options that fit your lifestyle and preferences.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--purple"><i class="fa-solid fa-people-roof"></i></div>
+            <h3>From Child to Elder Care</h3>
+            <p>Comprehensive care solutions for every family member.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Care Services</h2>
+          <p>Comprehensive healthcare solutions tailored to your family's unique needs.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card service-card--blue">
+            <div class="service-card__icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <h3>Healthcare & Telehealth</h3>
+            <p>Complete medical care with virtual consultations and in-person visits.</p>
+            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card service-card--purple">
+            <div class="service-card__icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Mental Health & Teletherapy</h3>
+            <p>Professional mental health support through secure online sessions.</p>
+            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card service-card--teal">
+            <div class="service-card__icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3>Adult & Home Care</h3>
+            <p>Senior, post-op, and daily-living support delivered at home.</p>
+            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card service-card--pink">
+            <div class="service-card__icon"><i class="fa-solid fa-child-reaching"></i></div>
+            <h3>Childcare</h3>
+            <p>Safe, nurturing care for children with qualified professionals.</p>
+            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card service-card--orange">
+            <div class="service-card__icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <h3>Special Childcare (ABA)</h3>
+            <p>Specialized ABA therapy for children with developmental needs.</p>
+            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-assistant">
+      <div class="container ai-assistant__container">
+        <div class="ai-assistant__content">
+          <span class="badge badge--white">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> AI-Powered Assistant
+          </span>
+
+          <h2>Smart Health Triage & Care Recommendations</h2>
+
+          <p>
+            Our AI assistant provides instant symptom assessment, care recommendations, and
+            seamlessly connects you with the right healthcare providers.
+          </p>
+
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> 24/7 symptom triage and guidance</li>
+            <li><i class="fa-solid fa-circle-check"></i> Smart provider matching based on needs</li>
+            <li><i class="fa-solid fa-circle-check"></i> Instant appointment scheduling</li>
+          </ul>
+
+          <div class="ai-assistant__stats">
+            <div class="ai-assistant__stat">
+              <strong>&lt; 60s</strong>
+              <span>Average response time</span>
+            </div>
+            <div class="ai-assistant__stat">
+              <strong>50k+</strong>
+              <span>Symptoms triaged</span>
+            </div>
+            <div class="ai-assistant__stat">
+              <strong>24/7</strong>
+              <span>Always available</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-primary">
+            Try AI Assistant <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="ai-assistant__media">
+          <div class="ai-assistant__blob ai-assistant__blob--blue"></div>
+          <div class="ai-assistant__blob ai-assistant__blob--green"></div>
+
+          <div class="chat-card" aria-hidden="true">
+            <div class="chat-card__header">
+              <div class="chat-card__avatar"><i class="fa-solid fa-robot"></i></div>
+              <div>
+                <strong>UpCare AI Assistant</strong>
+                <span>Always here to help</span>
+              </div>
+              <span class="chat-card__status"></span>
+            </div>
+
+            <div class="chat-card__body">
+              <div class="chat-bubble chat-bubble--user">
+                <p>I have a headache and fever for 2 days</p>
+                <span>2:30 PM</span>
+              </div>
+
+              <div class="chat-bubble chat-bubble--ai">
+                <span class="chat-bubble__label"><i class="fa-solid fa-robot"></i> AI Assistant</span>
+                <p>I understand you're experiencing headache and fever. Based on your symptoms, I recommend:</p>
+
+                <p class="chat-bubble__heading">Immediate Care Options</p>
+                <ul class="chat-bubble__list">
+                  <li>Virtual consultation with Dr. Sarah <em>(available now)</em></li>
+                  <li>Urgent care visit at UpCare Center <em>(15 min drive)</em></li>
+                </ul>
+
+                <p class="chat-bubble__heading">Symptom Management</p>
+                <ul class="chat-bubble__list">
+                  <li>Stay hydrated and rest in a cool, quiet room</li>
+                  <li>Take acetaminophen for fever if needed</li>
+                </ul>
+
+                <span>2:31 PM</span>
+              </div>
+
+              <div class="chat-bubble chat-bubble--typing">
+                <span class="chat-bubble__label"><i class="fa-solid fa-robot"></i> AI Assistant</span>
+                <span class="typing-dots"><span></span><span></span><span></span></span>
+              </div>
+            </div>
+
+            <div class="chat-card__input">
+              <input type="text" placeholder="Type your symptoms or health questions..." disabled />
+              <button type="button" aria-label="Send message" disabled><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </div>
+
+          <p class="ai-assistant__trust"><i class="fa-solid fa-lock"></i> HIPAA-compliant & encrypted conversations</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Success Stories</span>
+          <h2>What Our Families Say</h2>
+          <p>Join thousands of families who trust UpCare Mediconnect for their healthcare needs</p>
+        </div>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-solid fa-quote-left testimonial-card__quote-icon"></i>
+            <p>UpCare Mediconnect transformed how we access healthcare. The AI assistant helped me find the right specialist for my father's condition in minutes, not days.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <strong>Maria Rodriguez</strong>
+                <span>Family Caregiver</span>
+                <span><i class="fa-solid fa-location-dot"></i> New York</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-solid fa-quote-left testimonial-card__quote-icon"></i>
+            <p>As a working mother, having multilingual support and home care options has been life-changing. The quality of care is exceptional, and the convenience is unmatched.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <strong>Fatima Al-Hassan</strong>
+                <span>Working Mother</span>
+                <span><i class="fa-solid fa-location-dot"></i> New Jersey</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Simple Process</span>
+          <h2>How It Works</h2>
+          <p>Getting the care you need has never been easier. Follow these simple steps.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__icon">
+              <span class="step__number">01</span>
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <h3>Get Matched</h3>
+            <p>Our AI instantly matches you with qualified care providers based on your specific needs, location, and preferences.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">
+              <span class="step__number">02</span>
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h3>Book Care</h3>
+            <p>Schedule your appointment online or request in-home care with flexible timing that works for your family.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">
+              <span class="step__number">03</span>
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3>Ongoing Support</h3>
+            <p>Receive continuous care coordination, follow-ups, and 24/7 AI assistance for all your healthcare needs.</p>
           </div>
         </div>
       </div>
     </section>
 
   </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+        </a>
+        <p>One platform for every care you need. AI-powered healthcare for families, seniors, children, and individuals.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Healthcare & Telehealth</a></li>
+          <li><a href="#">Mental Health</a></li>
+          <li><a href="#">Childcare & ABA</a></li>
+          <li><a href="#">Homecare</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">HIPAA Compliance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Login / Sign Up</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">24/7 Support</a></li>
+          <li><a href="#">Emergency Care</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 UpCare Mediconnect. All rights reserved.</p>
+        <div class="footer__badges">
+          <span class="chip">HIPAA Compliant</span>
+          <span class="chip">AI-Powered</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
