@@ -1,351 +1,620 @@
-/* ===== Healthcare & Telehealth page ===== */
+/* ===========================================================
+   UpCare Mediconnect: Primary care & telehealth page
+   Builds on the tokens and components in home.css.
+   =========================================================== */
 
-.th-section-title {
-  text-align: center;
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-bold);
-  color: var(--color-heading);
-  margin-bottom: var(--space-xl);
+.btn--sm {
+  min-height: 36px;
+  padding: 0.4rem 0.875rem;
+  font-size: 0.875rem;
 }
 
-/* Hero */
-.th-hero {
-  padding: var(--space-2xl) 0;
-  text-align: center;
-  color: var(--color-white);
-  background:
-    linear-gradient(135deg, rgba(27, 95, 209, 0.88), rgba(18, 183, 106, 0.78)),
-    url('../assets/images/hero-doctor.jpg') center/cover;
+/* ---------- Hero ---------- */
+
+.tele-hero .hero__title {
+  margin-top: 0;
 }
 
-.th-hero__container {
-  max-width: 720px;
-}
-
-.th-hero h1 {
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
-  margin: 0 0 var(--space-sm);
-}
-
-.th-hero p {
-  font-size: var(--fs-md);
-  margin: 0 0 var(--space-lg);
-  opacity: 0.95;
-}
-
-/* About */
-.th-about {
-  padding: var(--space-2xl) 0;
-}
-
-.th-about__grid {
+.tele-hero__points {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-xl);
+  gap: 0.625rem;
+  margin-top: 2rem;
+}
+
+.tele-hero__points li {
+  display: flex;
   align-items: center;
+  gap: 0.625rem;
+  color: var(--gray-700);
+  font-weight: 500;
 }
 
-.th-about .eyebrow {
-  display: block;
-  font-weight: var(--fw-semibold);
-  color: var(--color-heading);
-  font-size: var(--fs-lg);
-  margin-bottom: var(--space-md);
+.tele-hero__points .icon {
+  color: var(--green-500);
 }
 
-.th-about__content p {
-  color: var(--color-text);
-  line-height: 1.7;
-  margin: 0 0 var(--space-md);
+.tele-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(540px, 50vw, 620px);
 }
 
-.th-about__media img {
+.tele-visual__stage {
+  position: absolute;
+  inset: 8% 4% 4%;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(29, 108, 224, 0.12) 1px, transparent 0) 0 0 / 22px 22px,
+    var(--blue-100);
+  border-radius: 32px;
+}
+
+/* Video-call screen */
+.phone--call {
+  --pw: 270px;
+  z-index: 1;
+}
+
+.phone__screen--call {
+  background: #0D1220;
+}
+
+.call__video {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.phone__screen--call::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13, 18, 32, 0.55), transparent 28%, transparent 65%, rgba(13, 18, 32, 0.7));
+}
+
+.phone__status--light {
+  color: #FFFFFF;
+}
+
+.call__top,
+.call__self,
+.call__controls {
+  position: relative;
+  z-index: 2;
+}
+
+.call__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 6px 16px;
+  color: #FFFFFF;
+}
+
+.call__top strong {
+  display: block;
+  font-size: 13px;
+}
+
+.call__top span {
+  font-size: 10.5px;
+  opacity: 0.85;
+}
+
+.call__timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(13, 18, 32, 0.5);
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+
+.call__timer span {
+  width: 6px;
+  height: 6px;
+  background: #F97066;
+  border-radius: 50%;
+}
+
+.call__self {
+  position: absolute;
+  top: 92px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 86px;
+  background: #F5E6E8;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+}
+
+.call__controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-bottom: 26px;
+}
+
+.call__controls span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.22);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+.call__controls .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.call__controls .call__end {
+  background: #F04438;
+  transform: rotate(135deg);
+}
+
+/* Floating status cards */
+.float-note {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #FFFFFF;
+  border-radius: 14px;
   box-shadow: var(--shadow-lg);
 }
 
-/* Service types */
-.th-types {
-  padding: var(--space-2xl) 0;
-  background: var(--color-bg-alt);
+.float-note strong {
+  display: block;
+  color: var(--gray-900);
+  font-size: 0.875rem;
 }
 
-.th-types__grid {
+.float-note span:not(.float-note__icon) {
+  color: var(--gray-500);
+  font-size: 0.75rem;
+}
+
+.float-note__icon {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  background: var(--blue-50);
+  border-radius: 10px;
+  color: var(--blue-600);
 }
 
-.th-type-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  text-align: center;
-  transition: box-shadow var(--transition-base), transform var(--transition-base);
+.float-note__icon--green {
+  background: var(--green-50);
+  color: var(--green-700);
 }
 
-.th-type-card:hover {
-  box-shadow: var(--shadow-md);
+.float-note__icon .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.float-note--rx {
+  top: 22%;
+  left: 0;
+}
+
+.float-note--wait {
+  right: 0;
+  bottom: 16%;
+}
+
+/* ---------- Types of care ---------- */
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.care-card {
+  padding: 1.75rem;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.care-card:hover {
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
-.th-type-card__icon {
+.care-card__icon {
+  display: grid;
+  place-items: center;
   width: 48px;
   height: 48px;
-  margin: 0 auto var(--space-sm);
+  margin-bottom: 1.25rem;
+  border-radius: 12px;
+}
+
+.care-card__icon--blue { background: var(--blue-50); color: var(--blue-600); }
+.care-card__icon--green { background: var(--green-50); color: var(--green-700); }
+.care-card__icon--violet { background: var(--violet-50); color: var(--violet-700); }
+.care-card__icon--amber { background: var(--amber-50); color: var(--amber-700); }
+.care-card__icon--rose { background: #FFF1F3; color: var(--rose-700); }
+
+.care-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1875rem;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Departments & doctors ---------- */
+
+.depts {
+  background: var(--bg-soft);
+}
+
+.dept-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  align-items: start;
+  gap: 2rem;
+}
+
+.dept-tabs {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xs);
+}
+
+.dept-tab {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-pill);
-  background: var(--color-primary-light);
-  color: var(--color-primary);
-  font-size: var(--fs-md);
+  gap: 0.75rem;
+  min-height: 48px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  color: var(--gray-600);
+  font-weight: 700;
+  text-align: left;
+  transition: background-color 0.15s, color 0.15s;
 }
 
-.th-type-card h3 {
-  font-size: var(--fs-base);
-  margin: 0 0 var(--space-xs);
-  color: var(--color-heading);
+.dept-tab:hover {
+  background: var(--gray-50);
+  color: var(--gray-900);
 }
 
-.th-type-card p {
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
-  margin: 0;
+.dept-tab[aria-selected='true'] {
+  background: var(--blue-50);
+  color: var(--blue-600);
 }
 
-/* Departments */
-.th-departments {
-  padding: var(--space-2xl) 0;
-}
-
-.dept {
+.dept-tab__icon {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
-  border-bottom: 1px solid var(--color-border-light);
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 8px;
 }
 
-.dept:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
+.dept-tab__icon .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.dept-tab__icon--blue { background: var(--blue-50); color: var(--blue-600); }
+.dept-tab__icon--green { background: var(--green-50); color: var(--green-700); }
+.dept-tab__icon--violet { background: var(--violet-50); color: var(--violet-700); }
+.dept-tab__icon--amber { background: var(--amber-50); color: var(--amber-700); }
+.dept-tab__icon--rose { background: #FFF1F3; color: var(--rose-700); }
+
+.dept-tab[aria-selected='true'] .dept-tab__icon {
+  background: #FFFFFF;
+  box-shadow: var(--shadow-xs);
+}
+
+.dept-panel + .dept-panel {
+  margin-top: 3rem;
+}
+
+.dept-panel[hidden] {
+  display: none;
+}
+
+.js .dept-panel + .dept-panel {
+  margin-top: 0;
+}
+
+.dept-panel:focus-visible {
+  outline-offset: 6px;
+}
+
+.dept-panel__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dept-panel__head h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.dept-panel__head p {
+  margin-top: 0.25rem;
+}
+
+.docs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.doc {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow 0.2s;
+}
+
+.doc:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.doc__top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+}
+
+.doc__top .av {
+  width: 44px;
+  height: 44px;
+}
+
+.doc__name {
+  display: block;
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+.doc__name:hover {
+  color: var(--blue-600);
+}
+
+.doc__role {
+  color: var(--blue-600);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.doc__exp {
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.doc__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+}
+
+.doc__mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--gray-500);
+  font-size: 0.8125rem;
+}
+
+.doc__mode .icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------- How telehealth works ---------- */
+
+#how-telehealth {
+  background: #FFFFFF;
+}
+
+.tele-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tele-steps li {
+  position: relative;
+  padding: 1.5rem 1.25rem;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+}
+
+.tele-steps .flow__num {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.tele-steps__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  box-shadow: var(--shadow-xs);
+  color: var(--blue-600);
+}
+
+.tele-steps h3 {
+  margin-bottom: 0.375rem;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+.tele-steps p {
+  font-size: 0.9375rem;
+}
+
+/* ---------- Why UpCare ---------- */
+
+#why {
+  background: var(--bg-soft);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.why-list {
+  margin-top: 0;
+}
+
+/* ---------- CTA ---------- */
+
+.cta {
+  padding-top: var(--section-y);
+}
+
+.cta__panel--simple {
+  grid-template-columns: minmax(0, 1fr);
   padding-bottom: 0;
 }
 
-.dept__media img {
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
+.cta__panel--simple h2 {
+  max-width: 22ch;
 }
 
-.dept__content h3 {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  font-size: var(--fs-lg);
-  color: var(--color-heading);
-  margin: 0 0 var(--space-xs);
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1080px) {
+  .docs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tele-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-.dept__icon {
-  font-size: var(--fs-md);
+@media (max-width: 960px) {
+  .tele-visual {
+    width: min(100%, 520px);
+    height: 560px;
+    margin-inline: auto;
+  }
+
+  .care-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Departments become a horizontal tab strip */
+  .dept-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .dept-tabs {
+    position: static;
+    display: flex;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 0.25rem var(--gutter);
+    overflow-x: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    scrollbar-width: none;
+  }
+
+  .dept-tab {
+    flex: none;
+    background: #FFFFFF;
+    border: 1px solid var(--gray-200);
+    white-space: nowrap;
+  }
+
+  .dept-tab[aria-selected='true'] {
+    border-color: #C9DBFC;
+  }
+
+  .why-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
-.dept__icon--red { color: var(--color-error); }
-.dept__icon--purple { color: var(--color-purple); }
-.dept__icon--blue { color: var(--color-primary); }
-.dept__icon--green { color: var(--color-secondary); }
-.dept__icon--pink { color: var(--color-pink); }
-.dept__icon--teal { color: #0E9384; }
+@media (max-width: 640px) {
+  .tele-visual {
+    height: 500px;
+  }
 
-.dept__desc {
-  color: var(--color-text-muted);
-  margin: 0 0 var(--space-md);
-}
+  .phone--call {
+    --pw: 236px;
+  }
 
-.dept__label {
-  display: block;
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
-  color: var(--color-heading);
-  margin-bottom: var(--space-sm);
-}
+  .float-note--rx {
+    top: 10%;
+  }
 
-.dept__doctors {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
-}
+  .float-note--wait {
+    bottom: 8%;
+  }
 
-.doctor-card {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-}
+  .care-grid,
+  .docs {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-.doctor-card h4 {
-  margin: 0 0 2px;
-  font-size: var(--fs-base);
-  color: var(--color-heading);
-}
+  .tele-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-.doctor-card h4 a {
-  transition: color var(--transition-fast);
-}
-
-.doctor-card h4 a:hover {
-  color: var(--color-primary);
-}
-
-.doctor-card span {
-  display: block;
-  font-size: var(--fs-xs);
-  color: var(--color-primary);
-  font-weight: var(--fw-medium);
-  margin-bottom: var(--space-xs);
-}
-
-.doctor-card p {
-  font-size: var(--fs-xs);
-  color: var(--color-text-muted);
-  margin: 0 0 var(--space-sm);
-  line-height: 1.5;
-}
-
-.doctor-card .btn-sm {
-  font-size: var(--fs-xs);
-  padding: 0.4rem 0.75rem;
-  width: 100%;
-  justify-content: center;
-}
-
-.doctor-card--booked {
-  background: var(--color-primary-light);
-  border-color: var(--color-primary);
-}
-
-/* Telehealth steps */
-.th-steps {
-  padding: var(--space-2xl) 0;
-  background: var(--color-bg-alt);
-}
-
-.th-steps__grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-lg);
-}
-
-.th-step {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg) var(--space-md);
-  text-align: center;
-}
-
-.th-step__icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto var(--space-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-pill);
-  background: var(--tint-blue);
-  color: var(--color-primary);
-  font-size: var(--fs-md);
-}
-
-.th-step h3 {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--color-heading);
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Why choose */
-.th-why {
-  padding: var(--space-2xl) 0;
-}
-
-.th-why__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-}
-
-.th-why-card {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  background: var(--color-bg-alt);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-}
-
-.th-why-card i {
-  font-size: var(--fs-lg);
-  color: var(--color-secondary);
-  flex-shrink: 0;
-}
-
-.th-why-card h3 {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--color-heading);
-  margin: 0;
-}
-
-/* CTA */
-.th-cta {
-  padding: var(--space-2xl) 0;
-  background: var(--gradient-brand);
-  text-align: center;
-}
-
-.th-cta__inner {
-  max-width: 760px;
-}
-
-.th-cta h2 {
-  color: var(--color-white);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-semibold);
-  margin: 0 0 var(--space-lg);
-}
-
-.btn-white {
-  background: var(--color-white);
-  color: var(--color-primary);
-}
-
-.btn-white:hover {
-  background: var(--color-bg-alt);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .th-about__grid { grid-template-columns: 1fr; }
-  .th-types__grid { grid-template-columns: repeat(2, 1fr); }
-  .dept { grid-template-columns: 1fr; }
-  .dept__media img { min-height: 180px; }
-  .th-steps__grid { grid-template-columns: repeat(2, 1fr); }
-  .th-why__grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 600px) {
-  .th-types__grid { grid-template-columns: 1fr; }
-  .dept__doctors { grid-template-columns: 1fr; }
-  .th-steps__grid { grid-template-columns: 1fr; }
+  .dept-panel__head {
+    flex-direction: column;
+  }
 }

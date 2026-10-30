@@ -3,589 +3,966 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Healthcare & Telehealth services at UpCare Mediconnect — primary care, telehealth consultations, prescriptions, and medical departments with trusted doctors." />
-  <meta name="theme-color" content="#2F7DF4" />
-  <title>Healthcare & Telehealth Services | UpCare Mediconnect</title>
+  <meta name="description" content="Primary care and telehealth at UpCare Mediconnect: see licensed doctors and specialists by video or in person, with prescriptions and follow-ups." />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Primary Care &amp; Telehealth | UpCare Mediconnect</title>
 
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="assets/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/telehealth.css" />
+
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-ambulance" viewBox="0 0 24 24"><path d="M10 10H6" /><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><pathd="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14" /><path d="M8 8v4" /><path d="M9 18h6" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></symbol>
+    <symbol id="i-baby" viewBox="0 0 24 24"><path d="M9 12h.01" /><path d="M15 12h.01" /><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" /><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" /></symbol>
+    <symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-bone" viewBox="0 0 24 24"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" /></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" /><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" /><path d="M17.599 6.5a3 3 0 0 0 .399-1.375" /><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /><path d="M3.477 10.896a4 4 0 0 1 .585-.396" /><path d="M19.938 10.5a4 4 0 0 1 .585.396" /><path d="M6 18a4 4 0 0 1-1.967-.516" /><path d="M19.967 17.484A4 4 0 0 1 18 18" /></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="m9 16 2 2 4-4" /></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></symbol>
+    <symbol id="i-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></symbol>
+    <symbol id="i-heart-pulse" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></symbol>
+    <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6" /><path d="m4 14 6-6 2-3" /><path d="M2 5h12" /><path d="M7 2h1" /><path d="m22 22-5-10-5 10" /><path d="M14 18h6" /></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" x2="12" y1="19" y2="22" /></symbol>
+    <symbol id="i-microscope" viewBox="0 0 24 24"><path d="M6 18h8" /><path d="M3 22h18" /><path d="M14 22a7 7 0 1 0 0-14h-1" /><path d="M9 14h2" /><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" /><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" /></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" /></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+    <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /><path d="m8.5 8.5 7 7" /></symbol>
+    <symbol id="i-scan-face" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><path d="M9 9h.01" /><path d="M15 9h.01" /></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M11 2v2" /><path d="M5 2v2" /><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /><path d="M8 15a6 6 0 0 0 12 0v-3" /><circle cx="20" cy="10" r="2" /></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24"><path d="m18 2 4 4" /><path d="m17 7 3-3" /><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" /><path d="m9 11 4 4" /><path d="m5 19-3 3" /><path d="m14 4 6 6" /></symbol>
+    <symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" x2="19" y1="8" y2="14" /><line x1="22" x2="16" y1="11" y2="11" /></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></symbol>
+  </svg>
+
+  <svg width="0" height="0" class="sprite sprite--custom" aria-hidden="true" focusable="false">
+    <symbol id="s-heart" viewBox="0 0 32 32"><path d="M16 24c-.4 0-.8-.15-1.1-.43-1.5-1.35-2.9-2.55-4.15-3.6C7.2 17.1 5 15.25 5 12.4 5 10 6.9 8.1 9.3 8.1c1.4 0 2.75.65 3.6 1.7l3.1 3.65 3.1-3.65c.85-1.05 2.2-1.7 3.6-1.7 2.4 0 4.3 1.9 4.3 4.3 0 2.85-2.2 4.7-5.75 7.57-1.25 1.05-2.65 2.25-4.15 3.6-.3.28-.7.43-1.1.43z" /></symbol>
+    <symbol id="s-signal" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" /><rect x="5" y="5.5" width="3" height="6.5" rx="1" /><rect x="10" y="3" width="3" height="9" rx="1" /><rect x="15" y="0" width="3" height="12" rx="1" /></symbol>
+    <symbol id="s-wifi" viewBox="0 0 16 12"><path d="M8 2.6c2.3 0 4.4.9 6 2.4l1.2-1.3A10.5 10.5 0 0 0 8 .8 10.5 10.5 0 0 0 .8 3.7L2 5c1.6-1.5 3.7-2.4 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.7 6.7 0 0 0 8 4.4c-1.8 0-3.4.7-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c-.5 0-1 .2-1.3.5L8 11.5l1.3-1.3c-.3-.3-.8-.5-1.3-.5Z" /></symbol>
+    <symbol id="s-battery" viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4" /><rect x="2" y="2" width="20" height="8" rx="2" /><path d="M25 4v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2Z" opacity=".45" /></symbol>
+  </svg>
+
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header class="navbar">
-    <div class="container">
-
-      <a href="index.html" class="navbar__logo">
-        <i class="fa-solid fa-heart-pulse"></i>
-        <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+        <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+        <span class="logo__word">UpCare</span>
       </a>
 
-      <nav class="navbar__menu" id="navbarMenu">
-
-        <ul class="navbar__links">
-          <li><a href="index.html">Home</a></li>
+      <nav class="navbar__menu" id="navbarMenu" aria-label="Primary">
+        <ul class="nav__links">
           <li class="navbar__dropdown">
             <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
-              Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              Services <svg class="icon dropdown-icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
             </button>
             <ul class="navbar__dropdown-menu" id="servicesMenu">
-              <li><a href="telehealth.html" class="is-active" aria-current="page">Healthcare & Telehealth</a></li>
-              <li><a href="index.html#services">Mental Health & Teletherapy</a></li>
-              <li><a href="index.html#services">Childcare & ABA</a></li>
-              <li><a href="index.html#services">Adult & Home Care</a></li>
+              <li><a href="telehealth.html" aria-current="page"><strong>Primary care &amp; telehealth</strong><span>Check-ups, sick visits, prescriptions</span></a></li>
+              <li><a href="index.html#services"><strong>Therapy &amp; mental health</strong><span>Weekly sessions by video</span></a></li>
+              <li><a href="index.html#services"><strong>Home care</strong><span>Support for parents at home</span></a></li>
+              <li><a href="index.html#services"><strong>Childcare &amp; ABA therapy</strong><span>For little ones and kids who learn differently</span></a></li>
             </ul>
           </li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#home-visits">Home visits</a></li>
+          <li><a href="index.html#nurse">Nurse line</a></li>
+          <li><a href="index.html#stories">Reviews</a></li>
           <li>
-            <a href="#" class="navbar__ai-pill">
-              <i class="fa-solid fa-robot"></i> AI Assistant
+            <a href="ai-assistant.html" class="nav__ai">
+              <svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg> AI Assistant
             </a>
           </li>
         </ul>
 
-        <div class="navbar__actions">
-          <div class="navbar__dropdown">
-            <button type="button" class="navbar__lang" aria-expanded="false" aria-controls="langMenu">
-              <i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-            </button>
-            <ul class="navbar__dropdown-menu navbar__dropdown-menu--right" id="langMenu">
-              <li><a href="#">English</a></li>
-              <li><a href="#">বাংলা</a></li>
-              <li><a href="#">हिन्दी</a></li>
-              <li><a href="#">العربية</a></li>
-            </ul>
-          </div>
-          <a href="#" class="btn btn-primary">
-            Book Care <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#" class="navbar__login">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
-          </a>
+        <div class="nav__actions">
+          <a href="#" class="btn btn--ghost">Log in</a>
+          <a href="index.html#book" class="btn btn--primary">Book a visit</a>
         </div>
-
       </nav>
 
-      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-controls="navbarMenu" aria-expanded="false">
-        <span></span>
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Open menu" aria-controls="navbarMenu" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
-
     </div>
   </header>
 
   <main id="main">
 
     <!-- Hero -->
-    <section class="th-hero">
-      <div class="container th-hero__container">
-        <h1>Healthcare & Telehealth Services</h1>
-        <p>One Platform. Every Care You Need.</p>
-        <a href="#departments" class="btn btn-primary btn-lg">
-          Book Appointment <i class="fa-solid fa-arrow-right"></i>
-        </a>
+    <section class="hero tele-hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal>Primary care &amp; telehealth</p>
+          <h1 class="hero__title" data-reveal>See a doctor today, by video or in person.</h1>
+          <p class="hero__lede" data-reveal>
+            Licensed doctors and specialists for check-ups, sick visits, prescriptions and follow-ups.
+            Book online and get care from home, or visit one of our clinics in New York City.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a href="#departments" class="btn btn--primary btn--lg">Find a doctor</a>
+            <a href="ai-assistant.html" class="btn btn--secondary btn--lg">
+              <svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg> Check your symptoms
+            </a>
+          </div>
+          <ul class="tele-hero__points" data-reveal>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check" /></svg> Same-day video visits</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check" /></svg> Prescriptions sent to your pharmacy</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check" /></svg> Medicaid, Medicare &amp; most NY plans</li>
+          </ul>
+        </div>
+
+        <div class="tele-visual" data-reveal>
+          <div class="tele-visual__stage" aria-hidden="true"></div>
+
+          <div class="phone phone--call" aria-hidden="true">
+            <div class="phone__screen phone__screen--call">
+              <img class="call__video" src="assets/images/hero-doctor.jpg" alt="" width="1200" height="1800" />
+              <div class="phone__status phone__status--light"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+              <div class="call__top">
+                <div><strong>Dr. Amara Okafor</strong><span>Family medicine</span></div>
+                <span class="call__timer"><span></span>08:42</span>
+              </div>
+              <span class="call__self"><span class="av av--rose av--sm">RS</span></span>
+              <div class="call__controls">
+                <span><svg class="icon"><use href="#i-mic" /></svg></span>
+                <span><svg class="icon"><use href="#i-video" /></svg></span>
+                <span class="call__end"><svg class="icon"><use href="#i-phone" /></svg></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-note float-note--rx" aria-hidden="true">
+            <span class="float-note__icon float-note__icon--green"><svg class="icon"><use href="#i-pill" /></svg></span>
+            <div><strong>Prescription sent</strong><span>Ready for pickup at 4:30 PM</span></div>
+          </div>
+
+          <div class="float-note float-note--wait" aria-hidden="true">
+            <span class="float-note__icon"><svg class="icon"><use href="#i-clock" /></svg></span>
+            <div><strong>Next video visit</strong><span>Available in 12 min</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="th-about">
-      <div class="container th-about__grid">
-        <div class="th-about__content">
-          <span class="eyebrow">About Our Healthcare Services</span>
-          <p>UpCare Mediconnect connects you with licensed doctors and specialists, offering in-person and telehealth services. From preventive checkups to urgent consultations, we ensure care is accessible, affordable, and personalized.</p>
-          <p>Consult with doctors online securely, manage prescriptions, and receive follow-up care from the comfort of your home.</p>
-        </div>
-        <div class="th-about__media">
-          <img src="assets/images/hero-doctor.jpg" alt="Smiling female doctor holding a tablet" loading="lazy" width="440" height="330" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Service types -->
-    <section class="th-types">
+    <!-- Key numbers -->
+    <section class="numbers" aria-label="Telehealth at a glance">
       <div class="container">
-        <h2 class="th-section-title">Types of Healthcare Services</h2>
-
-        <div class="th-types__grid">
-          <div class="th-type-card">
-            <div class="th-type-card__icon"><i class="fa-solid fa-user-doctor"></i></div>
-            <h3>Primary Care</h3>
-            <p>General checkups & family medicine</p>
-          </div>
-          <div class="th-type-card">
-            <div class="th-type-card__icon"><i class="fa-solid fa-video"></i></div>
-            <h3>Telehealth Consultations</h3>
-            <p>Video calls with doctors & specialists</p>
-          </div>
-          <div class="th-type-card">
-            <div class="th-type-card__icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
-            <h3>Prescription & Medication Management</h3>
-            <p>Digital prescriptions</p>
-          </div>
-          <div class="th-type-card">
-            <div class="th-type-card__icon"><i class="fa-solid fa-truck-medical"></i></div>
-            <h3>Urgent Care</h3>
-            <p>Quick non-emergency treatment</p>
-          </div>
-          <div class="th-type-card">
-            <div class="th-type-card__icon"><i class="fa-solid fa-heart-pulse"></i></div>
-            <h3>Chronic Condition Care</h3>
-            <p>Diabetes, hypertension, asthma, etc.</p>
-          </div>
-          <div class="th-type-card">
-            <div class="th-type-card__icon"><i class="fa-solid fa-syringe"></i></div>
-            <h3>Preventive Health & Vaccinations</h3>
-            <p>Wellness checks & immunizations</p>
-          </div>
-        </div>
+        <dl class="numbers__row">
+          <div><dt>Average wait for a video visit</dt><dd>12 min</dd></div>
+          <div><dt>Doctors across 7 departments</dt><dd>36</dd></div>
+          <div><dt>Video and in-person visits</dt><dd>7 days</dd></div>
+          <div><dt>Secure, encrypted visits</dt><dd class="numbers__small">HIPAA compliant</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- Departments -->
-    <section class="th-departments" id="departments">
+    <!-- Types of care -->
+    <section class="section" id="care-types">
       <div class="container">
-        <h2 class="th-section-title">Medical Departments & Doctors</h2>
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>Types of care</p>
+          <h2 class="section__title" data-reveal>Everything your doctor's office does, without the waiting room</h2>
+          <p class="section__sub" data-reveal>From a yearly check-up to managing a long-term condition, see the right clinician the way that suits you.</p>
+        </div>
 
-        <!-- Cardiology -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Cardiologist" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-heart-pulse dept__icon dept__icon--red"></i> Cardiology</h3>
-            <p class="dept__desc">Heart care, diagnostics, and treatment of cardiovascular conditions</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=sarah-johnson">Dr. Sarah Johnson</a></h4>
-                <span>Cardiologist</span>
-                <p>15+ years experience in interventional & general cardiology</p>
-                <a href="doctor.html?id=sarah-johnson" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=ahmed-khan">Dr. Ahmed Khan</a></h4>
-                <span>Interventional Cardiologist</span>
-                <p>12+ years, specializes in angioplasty & stents</p>
-                <a href="doctor.html?id=ahmed-khan" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=lisa-chen">Dr. Lisa Chen</a></h4>
-                <span>Cardiac Surgeon</span>
-                <p>20+ years, expert in heart valve & bypass surgery</p>
-                <a href="doctor.html?id=lisa-chen" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=robert-williams">Dr. Robert Williams</a></h4>
-                <span>Electrophysiologist</span>
-                <p>10+ years, specializes in heart rhythm disorders</p>
-                <a href="doctor.html?id=robert-williams" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=maria-torres">Dr. Maria Torres</a></h4>
-                <span>Preventive Cardiologist</span>
-                <p>8+ years, focus on lifestyle & risk reduction</p>
-                <a href="doctor.html?id=maria-torres" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
+        <ul class="care-grid">
+          <li class="care-card" data-reveal>
+            <span class="care-card__icon care-card__icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope" /></svg></span>
+            <h3>Primary care</h3>
+            <p>General check-ups and family medicine for every age, with a doctor who knows your history.</p>
+          </li>
+          <li class="care-card" data-reveal>
+            <span class="care-card__icon care-card__icon--violet"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg></span>
+            <h3>Telehealth consultations</h3>
+            <p>Video visits with doctors and specialists, usually within minutes.</p>
+          </li>
+          <li class="care-card" data-reveal>
+            <span class="care-card__icon care-card__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-pill" /></svg></span>
+            <h3>Prescriptions &amp; medication</h3>
+            <p>Digital prescriptions, refills and medication reviews sent straight to your pharmacy.</p>
+          </li>
+          <li class="care-card" data-reveal>
+            <span class="care-card__icon care-card__icon--rose"><svg class="icon" aria-hidden="true"><use href="#i-ambulance" /></svg></span>
+            <h3>Urgent care</h3>
+            <p>Fast treatment for non-emergency illness and injuries, the same day.</p>
+          </li>
+          <li class="care-card" data-reveal>
+            <span class="care-card__icon care-card__icon--amber"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse" /></svg></span>
+            <h3>Chronic condition care</h3>
+            <p>Ongoing support for diabetes, hypertension, asthma and more, with regular check-ins.</p>
+          </li>
+          <li class="care-card" data-reveal>
+            <span class="care-card__icon care-card__icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-syringe" /></svg></span>
+            <h3>Preventive health &amp; vaccines</h3>
+            <p>Wellness checks, screenings and immunizations to keep the whole family healthy.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Departments & doctors -->
+    <section class="section depts" id="departments">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>Departments &amp; doctors</p>
+          <h2 class="section__title" data-reveal>Find the right specialist</h2>
+          <p class="section__sub" data-reveal>Choose a department to see its doctors, then book a video or in-person visit.</p>
+        </div>
+
+        <div class="dept-layout" data-reveal>
+          <div class="dept-tabs" role="tablist" aria-label="Departments" aria-orientation="vertical">
+            <button type="button" class="dept-tab" role="tab" id="tab-cardiology" aria-controls="panel-cardiology" aria-selected="true">
+              <span class="dept-tab__icon dept-tab__icon--rose"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse" /></svg></span>
+              Cardiology
+            </button>
+            <button type="button" class="dept-tab" role="tab" id="tab-neurology" aria-controls="panel-neurology" aria-selected="false" tabindex="-1">
+              <span class="dept-tab__icon dept-tab__icon--violet"><svg class="icon" aria-hidden="true"><use href="#i-brain" /></svg></span>
+              Neurology
+            </button>
+            <button type="button" class="dept-tab" role="tab" id="tab-pediatrics" aria-controls="panel-pediatrics" aria-selected="false" tabindex="-1">
+              <span class="dept-tab__icon dept-tab__icon--amber"><svg class="icon" aria-hidden="true"><use href="#i-baby" /></svg></span>
+              Pediatrics
+            </button>
+            <button type="button" class="dept-tab" role="tab" id="tab-dermatology" aria-controls="panel-dermatology" aria-selected="false" tabindex="-1">
+              <span class="dept-tab__icon dept-tab__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-scan-face" /></svg></span>
+              Dermatology
+            </button>
+            <button type="button" class="dept-tab" role="tab" id="tab-orthopedics" aria-controls="panel-orthopedics" aria-selected="false" tabindex="-1">
+              <span class="dept-tab__icon dept-tab__icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-bone" /></svg></span>
+              Orthopedics
+            </button>
+            <button type="button" class="dept-tab" role="tab" id="tab-womens-health" aria-controls="panel-womens-health" aria-selected="false" tabindex="-1">
+              <span class="dept-tab__icon dept-tab__icon--rose"><svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg></span>
+              Women&#x27;s health
+            </button>
+            <button type="button" class="dept-tab" role="tab" id="tab-diagnostics" aria-controls="panel-diagnostics" aria-selected="false" tabindex="-1">
+              <span class="dept-tab__icon dept-tab__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-microscope" /></svg></span>
+              Diagnostics &amp; labs
+            </button>
           </div>
-        </article>
 
-        <!-- Neurology -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Neurologist reviewing brain scans" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-brain dept__icon dept__icon--purple"></i> Neurology</h3>
-            <p class="dept__desc">Diagnose and treatment of brain, spinal cord, and nervous system disorders</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=emily-parker">Dr. Emily Parker</a></h4>
-                <span>Neurologist</span>
-                <p>14+ years, specializes in migraine & epilepsy</p>
-                <a href="doctor.html?id=emily-parker" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="dept-panels">
+          <div class="dept-panel" role="tabpanel" id="panel-cardiology" aria-labelledby="tab-cardiology" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Cardiology</h3>
+                <p>Heart care, diagnostics, and treatment of cardiovascular conditions.</p>
               </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=raul-mehta">Dr. Raul Mehta</a></h4>
-                <span>Neurosurgeon</span>
-                <p>18+ years, expert in spinal & brain surgery</p>
-                <a href="doctor.html?id=raul-mehta" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=jennifer-adams">Dr. Jennifer Adams</a></h4>
-                <span>Stroke Specialist</span>
-                <p>11+ years, focus on stroke prevention & recovery</p>
-                <a href="doctor.html?id=jennifer-adams" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=hassan-ali">Dr. Hassan Ali</a></h4>
-                <span>Pediatric Neurologist</span>
-                <p>9+ years, specializes in pediatric & adolescent care</p>
-                <a href="doctor.html?id=hassan-ali" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=susan-martinez">Dr. Susan Martinez</a></h4>
-                <span>Movement Disorder Specialist</span>
-                <p>13+ years, focus on Parkinson's & tremor disorders</p>
-                <a href="doctor.html?id=susan-martinez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              <span class="badge badge--blue">5 doctors</span>
             </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">SJ</span>
+                    <div>
+                      <a href="doctor.html?id=sarah-johnson" class="doc__name">Dr. Sarah Johnson</a>
+                      <span class="doc__role">Cardiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">15+ years experience in interventional &amp; general cardiology</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=sarah-johnson" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Sarah Johnson">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">AK</span>
+                    <div>
+                      <a href="doctor.html?id=ahmed-khan" class="doc__name">Dr. Ahmed Khan</a>
+                      <span class="doc__role">Interventional Cardiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">12+ years, specializes in angioplasty &amp; stents</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=ahmed-khan" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Ahmed Khan">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">LC</span>
+                    <div>
+                      <a href="doctor.html?id=lisa-chen" class="doc__name">Dr. Lisa Chen</a>
+                      <span class="doc__role">Cardiac Surgeon</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">20+ years, expert in heart valve &amp; bypass surgery</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=lisa-chen" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Lisa Chen">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">RW</span>
+                    <div>
+                      <a href="doctor.html?id=robert-williams" class="doc__name">Dr. Robert Williams</a>
+                      <span class="doc__role">Electrophysiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">10+ years, specializes in heart rhythm disorders</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=robert-williams" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Robert Williams">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">MT</span>
+                    <div>
+                      <a href="doctor.html?id=maria-torres" class="doc__name">Dr. Maria Torres</a>
+                      <span class="doc__role">Preventive Cardiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">8+ years, focus on lifestyle &amp; risk reduction</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=maria-torres" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Maria Torres">Book</a>
+                  </div>
+                </li>
+            </ul>
           </div>
-        </article>
-
-        <!-- Pediatrics -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Family with child and pediatrician" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-child-reaching dept__icon dept__icon--blue"></i> Pediatrics</h3>
-            <p class="dept__desc">Child and adolescent healthcare services</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=michael-lee">Dr. Michael Lee</a></h4>
-                <span>Pediatrician</span>
-                <p>16+ years, well-child checkups & immunizations</p>
-                <a href="doctor.html?id=michael-lee" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="dept-panel" role="tabpanel" id="panel-neurology" aria-labelledby="tab-neurology" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Neurology</h3>
+                <p>Diagnose and treatment of brain, spinal cord, and nervous system disorders.</p>
               </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=hana-lopez">Dr. Hana Lopez</a></h4>
-                <span>Pediatric Allergist</span>
-                <p>10+ years, focus on allergies & asthma</p>
-                <a href="doctor.html?id=hana-lopez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=james-wright">Dr. James Wright</a></h4>
-                <span>Pediatric Endocrinologist</span>
-                <p>12+ years, specializes in growth & diabetes in children</p>
-                <a href="doctor.html?id=james-wright" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=priya-sharma">Dr. Priya Sharma</a></h4>
-                <span>Pediatric Gastroenterologist</span>
-                <p>9+ years, digestive health in children</p>
-                <a href="doctor.html?id=priya-sharma" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=david-brown">Dr. David Brown</a></h4>
-                <span>Neonatologist</span>
-                <p>14+ years, newborn & infant care</p>
-                <a href="doctor.html?id=david-brown" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=anna-kowalski">Dr. Anna Kowalski</a></h4>
-                <span>Pediatric Cardiologist</span>
-                <p>11+ years, treats heart conditions in children</p>
-                <a href="doctor.html?id=anna-kowalski" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              <span class="badge badge--blue">5 doctors</span>
             </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">EP</span>
+                    <div>
+                      <a href="doctor.html?id=emily-parker" class="doc__name">Dr. Emily Parker</a>
+                      <span class="doc__role">Neurologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">14+ years, specializes in migraine &amp; epilepsy</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=emily-parker" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Emily Parker">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">RM</span>
+                    <div>
+                      <a href="doctor.html?id=raul-mehta" class="doc__name">Dr. Raul Mehta</a>
+                      <span class="doc__role">Neurosurgeon</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">18+ years, expert in spinal &amp; brain surgery</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=raul-mehta" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Raul Mehta">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">JA</span>
+                    <div>
+                      <a href="doctor.html?id=jennifer-adams" class="doc__name">Dr. Jennifer Adams</a>
+                      <span class="doc__role">Stroke Specialist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">11+ years, focus on stroke prevention &amp; recovery</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=jennifer-adams" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Jennifer Adams">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">HA</span>
+                    <div>
+                      <a href="doctor.html?id=hassan-ali" class="doc__name">Dr. Hassan Ali</a>
+                      <span class="doc__role">Pediatric Neurologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">9+ years, specializes in pediatric &amp; adolescent care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=hassan-ali" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Hassan Ali">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">SM</span>
+                    <div>
+                      <a href="doctor.html?id=susan-martinez" class="doc__name">Dr. Susan Martinez</a>
+                      <span class="doc__role">Movement Disorder Specialist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">13+ years, focus on Parkinson&#x27;s &amp; tremor disorders</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=susan-martinez" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Susan Martinez">Book</a>
+                  </div>
+                </li>
+            </ul>
           </div>
-        </article>
-
-        <!-- Dermatology -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Dermatologist examining patient" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-hand-dots dept__icon dept__icon--green"></i> Dermatology</h3>
-            <p class="dept__desc">Skin, hair, and nail treatments</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=aisha-rahman">Dr. Aisha Rahman</a></h4>
-                <span>Dermatologist</span>
-                <p>13+ years, acne, eczema & skin conditions</p>
-                <a href="doctor.html?id=aisha-rahman" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="dept-panel" role="tabpanel" id="panel-pediatrics" aria-labelledby="tab-pediatrics" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Pediatrics</h3>
+                <p>Child and adolescent healthcare services.</p>
               </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=david-kim">Dr. David Kim</a></h4>
-                <span>Cosmetic Dermatologist</span>
-                <p>10+ years, skin rejuvenation & aesthetics</p>
-                <a href="doctor.html?id=david-kim" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=sarah-johnson-derm">Dr. Sarah Johnson</a></h4>
-                <span>Pediatric Dermatologist</span>
-                <p>9+ years, skin conditions in children</p>
-                <a href="doctor.html?id=sarah-johnson-derm" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=mark-thompson">Dr. Mark Thompson</a></h4>
-                <span>Dermatopathologist</span>
-                <p>15+ years, specializes in skin cancer diagnosis</p>
-                <a href="doctor.html?id=mark-thompson" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=nina-patel">Dr. Nina Patel</a></h4>
-                <span>Hair & Scalp Specialist</span>
-                <p>8+ years, hair loss & scalp disorders</p>
-                <a href="doctor.html?id=nina-patel" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              <span class="badge badge--blue">6 doctors</span>
             </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">ML</span>
+                    <div>
+                      <a href="doctor.html?id=michael-lee" class="doc__name">Dr. Michael Lee</a>
+                      <span class="doc__role">Pediatrician</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">16+ years, well-child checkups &amp; immunizations</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=michael-lee" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Michael Lee">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">HL</span>
+                    <div>
+                      <a href="doctor.html?id=hana-lopez" class="doc__name">Dr. Hana Lopez</a>
+                      <span class="doc__role">Pediatric Allergist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">10+ years, focus on allergies &amp; asthma</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=hana-lopez" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Hana Lopez">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">JW</span>
+                    <div>
+                      <a href="doctor.html?id=james-wright" class="doc__name">Dr. James Wright</a>
+                      <span class="doc__role">Pediatric Endocrinologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">12+ years, specializes in growth &amp; diabetes in children</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=james-wright" class="btn btn--secondary btn--sm" aria-label="Book with Dr. James Wright">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">PS</span>
+                    <div>
+                      <a href="doctor.html?id=priya-sharma" class="doc__name">Dr. Priya Sharma</a>
+                      <span class="doc__role">Pediatric Gastroenterologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">9+ years, digestive health in children</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=priya-sharma" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Priya Sharma">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">DB</span>
+                    <div>
+                      <a href="doctor.html?id=david-brown" class="doc__name">Dr. David Brown</a>
+                      <span class="doc__role">Neonatologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">14+ years, newborn &amp; infant care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=david-brown" class="btn btn--secondary btn--sm" aria-label="Book with Dr. David Brown">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">AK</span>
+                    <div>
+                      <a href="doctor.html?id=anna-kowalski" class="doc__name">Dr. Anna Kowalski</a>
+                      <span class="doc__role">Pediatric Cardiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">11+ years, treats heart conditions in children</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=anna-kowalski" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Anna Kowalski">Book</a>
+                  </div>
+                </li>
+            </ul>
           </div>
-        </article>
-
-        <!-- Orthopedics -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Orthopedic surgeon reviewing X-ray" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-bone dept__icon dept__icon--blue"></i> Orthopedics</h3>
-            <p class="dept__desc">Bones, joints, and musculoskeletal care</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=james-miller">Dr. James Miller</a></h4>
-                <span>Orthopedic Surgeon</span>
-                <p>17+ years, joint replacement & fracture care</p>
-                <a href="doctor.html?id=james-miller" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="dept-panel" role="tabpanel" id="panel-dermatology" aria-labelledby="tab-dermatology" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Dermatology</h3>
+                <p>Skin, hair, and nail treatments.</p>
               </div>
-              <div class="doctor-card doctor-card--booked">
-                <h4><a href="doctor.html?id=julia-chen">Dr. Julia Chen</a></h4>
-                <span>Sports Medicine Specialist</span>
-                <p>11+ years, focus on sports-related injuries</p>
-                <a href="#" class="btn btn-primary btn-sm">Appointment Booked</a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=kevin-rodriguez">Dr. Kevin Rodriguez</a></h4>
-                <span>Spine Specialist</span>
-                <p>14+ years, specializes in back & spinal conditions</p>
-                <a href="doctor.html?id=kevin-rodriguez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=michelle-davis">Dr. Michelle Davis</a></h4>
-                <span>Pediatric Orthopedist</span>
-                <p>9+ years, specializes in growth & surgery in children</p>
-                <a href="doctor.html?id=michelle-davis" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=thomas-wilson">Dr. Thomas Wilson</a></h4>
-                <span>Podiatrist</span>
-                <p>12+ years, foot and ankle care</p>
-                <a href="doctor.html?id=thomas-wilson" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              <span class="badge badge--blue">5 doctors</span>
             </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">AR</span>
+                    <div>
+                      <a href="doctor.html?id=aisha-rahman" class="doc__name">Dr. Aisha Rahman</a>
+                      <span class="doc__role">Dermatologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">13+ years, acne, eczema &amp; skin conditions</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=aisha-rahman" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Aisha Rahman">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">DK</span>
+                    <div>
+                      <a href="doctor.html?id=david-kim" class="doc__name">Dr. David Kim</a>
+                      <span class="doc__role">Cosmetic Dermatologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">10+ years, skin rejuvenation &amp; aesthetics</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=david-kim" class="btn btn--secondary btn--sm" aria-label="Book with Dr. David Kim">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">SJ</span>
+                    <div>
+                      <a href="doctor.html?id=sarah-johnson-derm" class="doc__name">Dr. Sarah Johnson</a>
+                      <span class="doc__role">Pediatric Dermatologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">9+ years, skin conditions in children</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=sarah-johnson-derm" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Sarah Johnson">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">MT</span>
+                    <div>
+                      <a href="doctor.html?id=mark-thompson" class="doc__name">Dr. Mark Thompson</a>
+                      <span class="doc__role">Dermatopathologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">15+ years, specializes in skin cancer diagnosis</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=mark-thompson" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Mark Thompson">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">NP</span>
+                    <div>
+                      <a href="doctor.html?id=nina-patel" class="doc__name">Dr. Nina Patel</a>
+                      <span class="doc__role">Hair &amp; Scalp Specialist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">8+ years, hair loss &amp; scalp disorders</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=nina-patel" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Nina Patel">Book</a>
+                  </div>
+                </li>
+            </ul>
           </div>
-        </article>
-
-        <!-- Gynecology -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Gynecologist smiling" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-venus dept__icon dept__icon--pink"></i> Gynecology & Women's Health</h3>
-            <p class="dept__desc">Women's reproductive health, pregnancy, wellness care</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=maria-gonzalez">Dr. Maria Gonzalez</a></h4>
-                <span>Gynecologist</span>
-                <p>15+ years, general reproductive health</p>
-                <a href="doctor.html?id=maria-gonzalez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="dept-panel" role="tabpanel" id="panel-orthopedics" aria-labelledby="tab-orthopedics" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Orthopedics</h3>
+                <p>Bones, joints, and musculoskeletal care.</p>
               </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=rachel-evans">Dr. Rachel Evans</a></h4>
-                <span>Obstetrician</span>
-                <p>13+ years, prenatal & delivery care</p>
-                <a href="doctor.html?id=rachel-evans" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=amanda-taylor">Dr. Amanda Taylor</a></h4>
-                <span>Reproductive Endocrinologist</span>
-                <p>10+ years, fertility & hormone care</p>
-                <a href="doctor.html?id=amanda-taylor" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=stephanie-lee">Dr. Stephanie Lee</a></h4>
-                <span>Gynecologic Oncologist</span>
-                <p>14+ years, specializes in gynecologic cancers</p>
-                <a href="doctor.html?id=stephanie-lee" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=fatima-hassan">Dr. Fatima Hassan</a></h4>
-                <span>Menopause Specialist</span>
-                <p>12+ years, focus on menopause & midlife care</p>
-                <a href="doctor.html?id=fatima-hassan" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              <span class="badge badge--blue">5 doctors</span>
             </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">JM</span>
+                    <div>
+                      <a href="doctor.html?id=james-miller" class="doc__name">Dr. James Miller</a>
+                      <span class="doc__role">Orthopedic Surgeon</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">17+ years, joint replacement &amp; fracture care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=james-miller" class="btn btn--secondary btn--sm" aria-label="Book with Dr. James Miller">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">JC</span>
+                    <div>
+                      <a href="doctor.html?id=julia-chen" class="doc__name">Dr. Julia Chen</a>
+                      <span class="doc__role">Sports Medicine Specialist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">11+ years, focus on sports-related injuries</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <span class="badge badge--green">Appointment booked</span>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">KR</span>
+                    <div>
+                      <a href="doctor.html?id=kevin-rodriguez" class="doc__name">Dr. Kevin Rodriguez</a>
+                      <span class="doc__role">Spine Specialist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">14+ years, specializes in back &amp; spinal conditions</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=kevin-rodriguez" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Kevin Rodriguez">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">MD</span>
+                    <div>
+                      <a href="doctor.html?id=michelle-davis" class="doc__name">Dr. Michelle Davis</a>
+                      <span class="doc__role">Pediatric Orthopedist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">9+ years, specializes in growth &amp; surgery in children</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=michelle-davis" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Michelle Davis">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">TW</span>
+                    <div>
+                      <a href="doctor.html?id=thomas-wilson" class="doc__name">Dr. Thomas Wilson</a>
+                      <span class="doc__role">Podiatrist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">12+ years, foot and ankle care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=thomas-wilson" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Thomas Wilson">Book</a>
+                  </div>
+                </li>
+            </ul>
           </div>
-        </article>
-
-        <!-- Diagnostics -->
-        <article class="dept">
-          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Radiologist with imaging scans" loading="lazy" /></div>
-          <div class="dept__content">
-            <h3><i class="fa-solid fa-magnifying-glass-chart dept__icon dept__icon--teal"></i> Diagnostics & Lab Testing</h3>
-            <p class="dept__desc">Lab tests and imaging services</p>
-            <span class="dept__label">Doctors</span>
-            <div class="dept__doctors">
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=oliver-grant">Dr. Oliver Grant</a></h4>
-                <span>Radiologist</span>
-                <p>16+ years, diagnostic imaging specialist</p>
-                <a href="doctor.html?id=oliver-grant" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="dept-panel" role="tabpanel" id="panel-womens-health" aria-labelledby="tab-womens-health" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Gynecology &amp; Women&#x27;s Health</h3>
+                <p>Women&#x27;s reproductive health, pregnancy, wellness care.</p>
               </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=noor-fatima">Dr. Noor Fatima</a></h4>
-                <span>Pathologist</span>
-                <p>11+ years, lab analysis & diagnostics</p>
-                <a href="doctor.html?id=noor-fatima" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=carlos-mendez">Dr. Carlos Mendez</a></h4>
-                <span>Nuclear Medicine Physician</span>
-                <p>13+ years, PET & nuclear imaging</p>
-                <a href="doctor.html?id=carlos-mendez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=helen-wang">Dr. Helen Wang</a></h4>
-                <span>Interventional Radiologist</span>
-                <p>10+ years, image-guided procedures</p>
-                <a href="doctor.html?id=helen-wang" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-              <div class="doctor-card">
-                <h4><a href="doctor.html?id=richard-clark">Dr. Richard Clark</a></h4>
-                <span>Clinical Lab Director</span>
-                <p>18+ years, quality & lab operations</p>
-                <a href="doctor.html?id=richard-clark" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              <span class="badge badge--blue">5 doctors</span>
             </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">MG</span>
+                    <div>
+                      <a href="doctor.html?id=maria-gonzalez" class="doc__name">Dr. Maria Gonzalez</a>
+                      <span class="doc__role">Gynecologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">15+ years, general reproductive health</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=maria-gonzalez" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Maria Gonzalez">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">RE</span>
+                    <div>
+                      <a href="doctor.html?id=rachel-evans" class="doc__name">Dr. Rachel Evans</a>
+                      <span class="doc__role">Obstetrician</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">13+ years, prenatal &amp; delivery care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=rachel-evans" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Rachel Evans">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">AT</span>
+                    <div>
+                      <a href="doctor.html?id=amanda-taylor" class="doc__name">Dr. Amanda Taylor</a>
+                      <span class="doc__role">Reproductive Endocrinologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">10+ years, fertility &amp; hormone care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=amanda-taylor" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Amanda Taylor">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">SL</span>
+                    <div>
+                      <a href="doctor.html?id=stephanie-lee" class="doc__name">Dr. Stephanie Lee</a>
+                      <span class="doc__role">Gynecologic Oncologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">14+ years, specializes in gynecologic cancers</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=stephanie-lee" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Stephanie Lee">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">FH</span>
+                    <div>
+                      <a href="doctor.html?id=fatima-hassan" class="doc__name">Dr. Fatima Hassan</a>
+                      <span class="doc__role">Menopause Specialist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">12+ years, focus on menopause &amp; midlife care</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=fatima-hassan" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Fatima Hassan">Book</a>
+                  </div>
+                </li>
+            </ul>
           </div>
-        </article>
-
+          <div class="dept-panel" role="tabpanel" id="panel-diagnostics" aria-labelledby="tab-diagnostics" tabindex="0">
+            <div class="dept-panel__head">
+              <div>
+                <h3>Diagnostics &amp; Lab Testing</h3>
+                <p>Lab tests and imaging services.</p>
+              </div>
+              <span class="badge badge--blue">5 doctors</span>
+            </div>
+            <ul class="docs">
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">OG</span>
+                    <div>
+                      <a href="doctor.html?id=oliver-grant" class="doc__name">Dr. Oliver Grant</a>
+                      <span class="doc__role">Radiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">16+ years, diagnostic imaging specialist</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=oliver-grant" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Oliver Grant">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--green" aria-hidden="true">NF</span>
+                    <div>
+                      <a href="doctor.html?id=noor-fatima" class="doc__name">Dr. Noor Fatima</a>
+                      <span class="doc__role">Pathologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">11+ years, lab analysis &amp; diagnostics</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=noor-fatima" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Noor Fatima">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--amber" aria-hidden="true">CM</span>
+                    <div>
+                      <a href="doctor.html?id=carlos-mendez" class="doc__name">Dr. Carlos Mendez</a>
+                      <span class="doc__role">Nuclear Medicine Physician</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">13+ years, PET &amp; nuclear imaging</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=carlos-mendez" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Carlos Mendez">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--rose" aria-hidden="true">HW</span>
+                    <div>
+                      <a href="doctor.html?id=helen-wang" class="doc__name">Dr. Helen Wang</a>
+                      <span class="doc__role">Interventional Radiologist</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">10+ years, image-guided procedures</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=helen-wang" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Helen Wang">Book</a>
+                  </div>
+                </li>
+                <li class="doc">
+                  <div class="doc__top">
+                    <span class="av av--blue" aria-hidden="true">RC</span>
+                    <div>
+                      <a href="doctor.html?id=richard-clark" class="doc__name">Dr. Richard Clark</a>
+                      <span class="doc__role">Clinical Lab Director</span>
+                    </div>
+                  </div>
+                  <p class="doc__exp">18+ years, quality &amp; lab operations</p>
+                  <div class="doc__foot">
+                    <span class="doc__mode"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg> Video &amp; in person</span>
+                    <a href="doctor.html?id=richard-clark" class="btn btn--secondary btn--sm" aria-label="Book with Dr. Richard Clark">Book</a>
+                  </div>
+                </li>
+            </ul>
+          </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- How telehealth works -->
-    <section class="th-steps">
+    <section class="section how" id="how-telehealth">
       <div class="container">
-        <h2 class="th-section-title">How Our Telehealth Works</h2>
-
-        <div class="th-steps__grid">
-          <div class="th-step">
-            <div class="th-step__icon"><i class="fa-solid fa-user-plus"></i></div>
-            <h3>Sign up & create your patient profile</h3>
-          </div>
-          <div class="th-step">
-            <div class="th-step__icon"><i class="fa-solid fa-stethoscope"></i></div>
-            <h3>Select department or doctor</h3>
-          </div>
-          <div class="th-step">
-            <div class="th-step__icon"><i class="fa-solid fa-calendar-check"></i></div>
-            <h3>Choose telehealth or in-person appointment</h3>
-          </div>
-          <div class="th-step">
-            <div class="th-step__icon"><i class="fa-solid fa-credit-card"></i></div>
-            <h3>Confirm & pay securely</h3>
-          </div>
-          <div class="th-step">
-            <div class="th-step__icon"><i class="fa-solid fa-display"></i></div>
-            <h3>Meet your doctor online or at the clinic</h3>
-          </div>
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>How it works</p>
+          <h2 class="section__title" data-reveal>From sign-up to seeing your doctor</h2>
+          <p class="section__sub" data-reveal>Five steps, and most people finish them in a few minutes.</p>
         </div>
+
+        <ol class="tele-steps">
+          <li data-reveal><span class="flow__num">1</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-user-plus" /></svg></span><h3>Create your profile</h3><p>Sign up and add your health details once.</p></li>
+          <li data-reveal><span class="flow__num">2</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope" /></svg></span><h3>Pick a department or doctor</h3><p>Browse specialists or let us match you.</p></li>
+          <li data-reveal><span class="flow__num">3</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar-check" /></svg></span><h3>Choose video or in person</h3><p>See real availability before you book.</p></li>
+          <li data-reveal><span class="flow__num">4</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-credit-card" /></svg></span><h3>Confirm &amp; pay securely</h3><p>Your coverage and copay show up front.</p></li>
+          <li data-reveal><span class="flow__num">5</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-monitor" /></svg></span><h3>Meet your doctor</h3><p>Join from your phone or visit the clinic.</p></li>
+        </ol>
       </div>
     </section>
 
-    <!-- Why Choose -->
-    <section class="th-why">
-      <div class="container">
-        <h2 class="th-section-title">Why Choose UpCare Mediconnect</h2>
-
-        <div class="th-why__grid">
-          <div class="th-why-card">
-            <i class="fa-solid fa-user-doctor"></i>
-            <h3>Licensed & verified specialists</h3>
-          </div>
-          <div class="th-why-card">
-            <i class="fa-solid fa-lock"></i>
-            <h3>Secure, HIPAA-compliant telehealth</h3>
-          </div>
-          <div class="th-why-card">
-            <i class="fa-solid fa-calendar-days"></i>
-            <h3>Easy scheduling and reminders</h3>
-          </div>
-          <div class="th-why-card">
-            <i class="fa-solid fa-shield-heart"></i>
-            <h3>Insurance accepted</h3>
-          </div>
-          <div class="th-why-card">
-            <i class="fa-solid fa-language"></i>
-            <h3>Multilingual support</h3>
-          </div>
+    <!-- Why UpCare -->
+    <section class="section" id="why">
+      <div class="container why-grid">
+        <div>
+          <p class="eyebrow" data-reveal>Why UpCare</p>
+          <h2 class="section__title" data-reveal>Care you can trust, on your schedule</h2>
+          <p class="section__sub" data-reveal>Every clinician is licensed and verified, and every visit is private by default.</p>
         </div>
+
+        <ul class="features why-list">
+          <li data-reveal><span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-badge-check" /></svg></span><div><strong>Licensed &amp; verified specialists</strong><p>Board-certified doctors, checked before they join UpCare.</p></div></li>
+          <li data-reveal><span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg></span><div><strong>Secure, HIPAA-compliant visits</strong><p>Encrypted video and messages that stay in your health record.</p></div></li>
+          <li data-reveal><span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg></span><div><strong>Easy scheduling &amp; reminders</strong><p>Book in a few taps and get a reminder before every visit.</p></div></li>
+          <li data-reveal><span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield-check" /></svg></span><div><strong>Insurance accepted</strong><p>In network with Medicaid, Medicare and most New York plans.</p></div></li>
+          <li data-reveal><span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-languages" /></svg></span><div><strong>Interpreters available</strong><p>Free medical interpreters in 200+ languages for every visit.</p></div></li>
+        </ul>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="th-cta">
-      <div class="container th-cta__inner">
-        <h2>Your health is our priority. Book your next appointment today with trusted doctors across specialties.</h2>
-        <a href="#departments" class="btn btn-white btn-lg">Sign Up & Book Care</a>
+    <section class="cta" id="book">
+      <div class="container">
+        <div class="cta__panel cta__panel--simple" data-reveal>
+          <div class="cta__copy">
+            <h2>Your health is our priority. Book your next visit today.</h2>
+            <p>Trusted doctors across every specialty, by video or in person, usually the same day.</p>
+            <div class="cta__actions">
+              <a href="#departments" class="btn btn--white btn--lg">Sign up &amp; book care</a>
+              <a href="tel:+12125550147" class="btn btn--outline-white btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg> (212) 555-0147</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="index.html" class="navbar__logo">
-          <i class="fa-solid fa-heart-pulse"></i>
-          <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
-        </a>
-        <p>One platform for every care you need. AI-powered healthcare for families, seniors, children, and individuals.</p>
-        <div class="footer__socials">
-          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+            <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+            <span class="logo__word">UpCare</span>
+          </a>
+          <p>Home and virtual care for New York families, in all five boroughs.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="UpCare on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg></a>
+            <a href="#" aria-label="UpCare on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook" /></svg></a>
+            <a href="#" aria-label="UpCare on LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h2>Care</h2>
+          <ul>
+            <li><a href="telehealth.html">Primary care &amp; telehealth</a></li>
+            <li><a href="index.html#services">Therapy &amp; mental health</a></li>
+            <li><a href="index.html#services">Home care</a></li>
+            <li><a href="index.html#services">Childcare &amp; ABA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="#">Log in / Sign up</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Insurance we accept</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">HIPAA notice</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer__col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="telehealth.html">Healthcare & Telehealth</a></li>
-          <li><a href="index.html#services">Mental Health</a></li>
-          <li><a href="index.html#services">Childcare & ABA</a></li>
-          <li><a href="index.html#services">Homecare</a></li>
-        </ul>
-      </div>
+      <p class="footer__emergency">
+        <svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg>
+        UpCare is not an emergency service. If you or someone else is in danger, call 911.
+      </p>
 
-      <div class="footer__col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">HIPAA Compliance</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Login / Sign Up</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">24/7 Support</a></li>
-          <li><a href="#">Emergency Care</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>&copy; 2026 UpCare Mediconnect. All rights reserved.</p>
-        <div class="footer__badges">
-          <span class="chip">HIPAA Compliant</span>
-          <span class="chip">AI-Powered</span>
-        </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 UpCare Mediconnect, New York, NY</p>
+        <p>HIPAA compliant · Licensed in New York</p>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/telehealth.js"></script>
 </body>
 </html>
