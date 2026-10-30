@@ -1,0 +1,307 @@
+/* ===========================================================
+   UpCare Mediconnect: AI Triage Assistant page
+   Builds on the tokens and components in home.css.
+   =========================================================== */
+
+.assist {
+  min-height: calc(100vh - var(--nav-h));
+  padding: clamp(1.5rem, 3vw, 2rem) 0 var(--section-y);
+  background: var(--bg-soft);
+}
+
+/* ---------- Emergency alert ---------- */
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1024px;
+  margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+  padding: 0.875rem 1.125rem;
+  border: 1px solid;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+}
+
+.alert--danger {
+  background: #FEF3F2;
+  border-color: #FECDCA;
+  color: #B42318;
+}
+
+.alert .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.alert strong {
+  font-weight: 700;
+}
+
+/* ---------- Page heading ---------- */
+
+.assist__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.assist__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  background: var(--blue-600);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  color: #FFFFFF;
+}
+
+.assist__icon .icon {
+  width: 26px;
+  height: 26px;
+}
+
+.assist__title {
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.assist__sub {
+  margin-top: 0.25rem;
+  font-size: 1.0625rem;
+}
+
+/* ---------- Layout ---------- */
+
+.assist__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+
+/* ---------- Chat card ---------- */
+
+.chat-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.chat-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: var(--blue-600);
+  color: #FFFFFF;
+}
+
+.chat-card__avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+}
+
+.chat-card__avatar svg {
+  width: 28px;
+  height: 28px;
+  fill: #FFFFFF;
+}
+
+.chat-card__title {
+  color: #FFFFFF;
+  font-size: 1.0625rem;
+}
+
+.chat-card__meta {
+  font-size: 0.8125rem;
+}
+
+.chat-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  padding: 0.25rem 0.625rem;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.chat-card__dot {
+  width: 8px;
+  height: 8px;
+  background: #47CD89;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(71, 205, 137, 0.3);
+}
+
+.chat-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 440px;
+  padding: 1.25rem;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 0.875rem 1rem;
+  background: var(--gray-100);
+  border-radius: 4px 16px 16px 16px;
+  color: var(--gray-900);
+}
+
+.bubble p + p {
+  margin-top: 0.5rem;
+}
+
+.bubble__who {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--blue-600);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.bubble__who .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.bubble__ask {
+  font-weight: 700;
+}
+
+.bubble__time {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--gray-500);
+  font-size: 0.75rem;
+}
+
+.chat-card__foot {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.chat-card__signin {
+  width: 100%;
+}
+
+.chat-card__signin .icon {
+  color: var(--gray-700);
+}
+
+/* ---------- How it works ---------- */
+
+.side-card {
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xs);
+}
+
+.side-card__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+}
+
+.side-card__title .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--blue-600);
+}
+
+.steps-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--gray-600);
+}
+
+.steps-list span {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  background: var(--blue-50);
+  border: 1px solid #C9DBFC;
+  border-radius: 50%;
+  color: var(--blue-600);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.side-card__note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: 12px;
+  color: var(--gray-500);
+  font-size: 0.8125rem;
+}
+
+.side-card__note strong {
+  color: var(--gray-700);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  .assist__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chat-card__body {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .alert {
+    align-items: flex-start;
+  }
+
+  .assist__head {
+    align-items: flex-start;
+  }
+
+  .assist__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .chat-card__status {
+    display: none;
+  }
+
+  .bubble {
+    max-width: 92%;
+  }
+}

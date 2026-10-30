@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Answer a few quick questions and the UpCare AI triage assistant will guide you to the right care, with a licensed nurse reviewing every chat." />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>AI Triage Assistant | UpCare Mediconnect</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/assistant.css" />
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></symbol>
+    <symbol id="i-log-in" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /><polyline points="10 17 15 12 10 7" /><line x1="15" x2="3" y1="12" y2="12" /></symbol>
+    <symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></symbol>
+  </svg>
+
+  <svg width="0" height="0" class="sprite sprite--custom" aria-hidden="true" focusable="false">
+    <symbol id="s-heart" viewBox="0 0 32 32"><path d="M16 24c-.4 0-.8-.15-1.1-.43-1.5-1.35-2.9-2.55-4.15-3.6C7.2 17.1 5 15.25 5 12.4 5 10 6.9 8.1 9.3 8.1c1.4 0 2.75.65 3.6 1.7l3.1 3.65 3.1-3.65c.85-1.05 2.2-1.7 3.6-1.7 2.4 0 4.3 1.9 4.3 4.3 0 2.85-2.2 4.7-5.75 7.57-1.25 1.05-2.65 2.25-4.15 3.6-.3.28-.7.43-1.1.43z" /></symbol>
+    <symbol id="s-signal" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" /><rect x="5" y="5.5" width="3" height="6.5" rx="1" /><rect x="10" y="3" width="3" height="9" rx="1" /><rect x="15" y="0" width="3" height="12" rx="1" /></symbol>
+    <symbol id="s-wifi" viewBox="0 0 16 12"><path d="M8 2.6c2.3 0 4.4.9 6 2.4l1.2-1.3A10.5 10.5 0 0 0 8 .8 10.5 10.5 0 0 0 .8 3.7L2 5c1.6-1.5 3.7-2.4 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.7 6.7 0 0 0 8 4.4c-1.8 0-3.4.7-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c-.5 0-1 .2-1.3.5L8 11.5l1.3-1.3c-.3-.3-.8-.5-1.3-.5Z" /></symbol>
+    <symbol id="s-battery" viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4" /><rect x="2" y="2" width="20" height="8" rx="2" /><path d="M25 4v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2Z" opacity=".45" /></symbol>
+  </svg>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+        <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+        <span class="logo__word">UpCare</span>
+      </a>
+
+      <nav class="navbar__menu" id="navbarMenu" aria-label="Primary">
+        <ul class="nav__links">
+          <li class="navbar__dropdown">
+            <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
+              Services <svg class="icon dropdown-icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+            </button>
+            <ul class="navbar__dropdown-menu" id="servicesMenu">
+              <li><a href="telehealth.html"><strong>Primary care &amp; telehealth</strong><span>Check-ups, sick visits, prescriptions</span></a></li>
+              <li><a href="index.html#services"><strong>Therapy &amp; mental health</strong><span>Weekly sessions by video</span></a></li>
+              <li><a href="index.html#services"><strong>Home care</strong><span>Support for parents at home</span></a></li>
+              <li><a href="index.html#services"><strong>Childcare &amp; ABA therapy</strong><span>For little ones and kids who learn differently</span></a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#home-visits">Home visits</a></li>
+          <li><a href="index.html#nurse">Nurse line</a></li>
+          <li><a href="index.html#stories">Reviews</a></li>
+          <li>
+            <a href="ai-assistant.html" class="nav__ai" aria-current="page">
+              <svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg> AI Assistant
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="#" class="btn btn--ghost">Log in</a>
+          <a href="index.html#book" class="btn btn--primary">Book a visit</a>
+        </div>
+      </nav>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Open menu" aria-controls="navbarMenu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="assist">
+    <div class="container">
+
+      <p class="alert alert--danger" role="note">
+        <svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg>
+        <span><strong>If this is a medical emergency,</strong> call 911 immediately or go to your nearest emergency room.</span>
+      </p>
+
+      <div class="assist__head">
+        <span class="assist__icon"><svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg></span>
+        <div>
+          <h1 class="assist__title">AI Triage Assistant</h1>
+          <p class="assist__sub">Answer a few quick questions and our assistant will guide you to the right care.</p>
+        </div>
+      </div>
+
+      <div class="assist__grid">
+
+        <!-- Chat -->
+        <section class="chat-card" aria-labelledby="chatTitle">
+          <header class="chat-card__head">
+            <span class="chat-card__avatar"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+            <div>
+              <h2 class="chat-card__title" id="chatTitle">UpCare AI Assistant</h2>
+              <p class="chat-card__meta">Powered by AI · A nurse reviews every chat</p>
+            </div>
+            <span class="chat-card__status"><span class="chat-card__dot" aria-hidden="true"></span> Online</span>
+          </header>
+
+          <div class="chat-card__body" role="log" aria-live="polite">
+            <div class="bubble">
+              <p class="bubble__who"><svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg> AI Assistant</p>
+              <p>Hello! I'm the UpCare triage assistant. I'll help guide you to the right care based on your symptoms.</p>
+              <p class="bubble__ask">What symptoms are you experiencing today?</p>
+              <time class="bubble__time" id="greetTime">11:15 PM</time>
+            </div>
+          </div>
+
+          <footer class="chat-card__foot">
+            <a href="#" class="btn btn--secondary chat-card__signin">
+              <svg class="icon" aria-hidden="true"><use href="#i-log-in" /></svg> Sign in to start AI triage
+            </a>
+          </footer>
+        </section>
+
+        <!-- How it works -->
+        <aside class="side-card" aria-labelledby="howTitle">
+          <h2 class="side-card__title" id="howTitle">
+            <svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg> How it works
+          </h2>
+          <ol class="steps-list">
+            <li><span>1</span>Share your symptoms with our AI assistant</li>
+            <li><span>2</span>Answer a few follow-up questions</li>
+            <li><span>3</span>Get personalized care recommendations</li>
+            <li><span>4</span>Book an appointment with the right specialist</li>
+          </ol>
+          <p class="side-card__note">
+            <strong>Note:</strong> This AI assistant provides recommendations only, not a medical diagnosis.
+            Always consult a licensed healthcare provider for medical advice.
+          </p>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+            <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+            <span class="logo__word">UpCare</span>
+          </a>
+          <p>Home and virtual care for New York families, in all five boroughs.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="UpCare on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg></a>
+            <a href="#" aria-label="UpCare on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook" /></svg></a>
+            <a href="#" aria-label="UpCare on LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h2>Care</h2>
+          <ul>
+            <li><a href="telehealth.html">Primary care &amp; telehealth</a></li>
+            <li><a href="index.html#services">Therapy &amp; mental health</a></li>
+            <li><a href="index.html#services">Home care</a></li>
+            <li><a href="index.html#services">Childcare &amp; ABA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="#">Log in / Sign up</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Insurance we accept</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">HIPAA notice</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__emergency">
+        <svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg>
+        UpCare is not an emergency service. If you or someone else is in danger, call 911.
+      </p>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 UpCare Mediconnect, New York, NY</p>
+        <p>Home and virtual care for New York families</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/assistant.js"></script>
+</body>
+</html>
