@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Doctor profile at UpCare Mediconnect — experience, areas of focus, availability, and patient reviews." />
+  <meta name="theme-color" content="#2F7DF4" />
+  <title>Doctor Profile | UpCare Mediconnect</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/doctor.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <div class="container">
+
+      <a href="index.html" class="navbar__logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+      </a>
+
+      <nav class="navbar__menu" id="navbarMenu">
+
+        <ul class="navbar__links">
+          <li><a href="index.html">Home</a></li>
+          <li class="navbar__dropdown">
+            <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
+              Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </button>
+            <ul class="navbar__dropdown-menu" id="servicesMenu">
+              <li><a href="telehealth.html" class="is-active">Healthcare & Telehealth</a></li>
+              <li><a href="index.html#services">Mental Health & Teletherapy</a></li>
+              <li><a href="index.html#services">Childcare & ABA</a></li>
+              <li><a href="index.html#services">Adult & Home Care</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="navbar__ai-pill">
+              <i class="fa-solid fa-robot"></i> AI Assistant
+            </a>
+          </li>
+        </ul>
+
+        <div class="navbar__actions">
+          <div class="navbar__dropdown">
+            <button type="button" class="navbar__lang" aria-expanded="false" aria-controls="langMenu">
+              <i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </button>
+            <ul class="navbar__dropdown-menu navbar__dropdown-menu--right" id="langMenu">
+              <li><a href="#">English</a></li>
+              <li><a href="#">বাংলা</a></li>
+              <li><a href="#">हिन्दी</a></li>
+              <li><a href="#">العربية</a></li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn-primary">
+            Book Care <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#" class="navbar__login">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+          </a>
+        </div>
+
+      </nav>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-controls="navbarMenu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Filled in by js/doctor.js from the ?id= in the URL -->
+    <div id="doctorProfile" hidden>
+
+      <!-- Profile header -->
+      <section class="doc-hero">
+        <div class="container doc-container doc-hero__inner">
+          <div class="doc-hero__photo">
+            <img id="doctorPhoto" src="assets/images/hero-doctor.jpg" alt="" width="280" height="280" />
+          </div>
+
+          <div class="doc-hero__info">
+            <span class="doc-badge" id="doctorDeptBadge"></span>
+            <h1 id="doctorName"></h1>
+            <p class="doc-hero__specialty" id="doctorSpecialty"></p>
+
+            <ul class="doc-hero__meta">
+              <li>
+                <i class="fa-solid fa-star doc-hero__star" aria-hidden="true"></i>
+                <strong id="doctorRating"></strong>
+                <span class="doc-hero__muted" id="doctorReviewCount"></span>
+              </li>
+              <li>
+                <i class="fa-solid fa-award doc-hero__award" aria-hidden="true"></i>
+                <span id="doctorExperience"></span>
+              </li>
+            </ul>
+
+            <p class="doc-hero__location">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span id="doctorLocation"></span>
+            </p>
+
+            <a href="#availability" class="btn btn-primary doc-hero__cta">
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i> Book Appointment
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Details -->
+      <section class="doc-body">
+        <div class="container doc-container doc-body__grid">
+
+          <div class="doc-body__main">
+            <article class="doc-card">
+              <h2 class="doc-card__title doc-card__title--lg" id="doctorAboutTitle">About</h2>
+              <p class="doc-card__text" id="doctorBio"></p>
+
+              <h3 class="doc-card__label">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Department
+              </h3>
+              <p class="doc-card__text" id="doctorDept"></p>
+            </article>
+
+            <article class="doc-card">
+              <h2 class="doc-card__title">Areas of Focus</h2>
+              <ul class="doc-focus" id="doctorFocus"></ul>
+            </article>
+          </div>
+
+          <aside class="doc-body__side">
+            <section class="doc-card" id="availability" aria-labelledby="availabilityTitle">
+              <h2 class="doc-card__title doc-card__title--icon" id="availabilityTitle">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> Available Today
+              </h2>
+              <div class="doc-slots" id="doctorSlots" role="group" aria-labelledby="availabilityTitle"></div>
+            </section>
+
+            <section class="doc-card doc-reviews" aria-labelledby="reviewsTitle">
+              <h2 class="doc-card__title doc-card__title--icon" id="reviewsTitle">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i> Patient Reviews
+              </h2>
+              <p class="doc-reviews__score" id="doctorRatingLarge"></p>
+              <div class="doc-reviews__stars" id="doctorStars" role="img"></div>
+              <p class="doc-reviews__note" id="doctorReviewNote"></p>
+            </section>
+          </aside>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Shown when the ?id= doesn't match a doctor -->
+    <section class="doc-not-found" id="doctorNotFound" hidden>
+      <div class="container doc-container">
+        <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+        <h1>Doctor not found</h1>
+        <p>We couldn't find that doctor profile. Browse our departments to find the right specialist.</p>
+        <a href="telehealth.html#departments" class="btn btn-primary">View all doctors <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="navbar__logo">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+        </a>
+        <p>One platform for every care you need. AI-powered healthcare for families, seniors, children, and individuals.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="telehealth.html">Healthcare & Telehealth</a></li>
+          <li><a href="index.html#services">Mental Health</a></li>
+          <li><a href="index.html#services">Childcare & ABA</a></li>
+          <li><a href="index.html#services">Homecare</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">HIPAA Compliance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Login / Sign Up</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">24/7 Support</a></li>
+          <li><a href="#">Emergency Care</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 UpCare Mediconnect. All rights reserved.</p>
+        <div class="footer__badges">
+          <span class="chip">HIPAA Compliant</span>
+          <span class="chip">AI-Powered</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/doctors.js"></script>
+  <script src="js/doctor.js"></script>
+</body>
+</html>

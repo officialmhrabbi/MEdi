@@ -3,436 +3,636 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UpCare Mediconnect is an AI-powered healthcare platform offering telehealth, mental health support, childcare, and in-home care for the whole family." />
-  <meta name="theme-color" content="#2F7DF4" />
-  <title>UpCare Mediconnect | AI-Powered Healthcare Platform</title>
+  <meta name="description" content="UpCare Mediconnect lets New York families book doctors, nurses, therapists and caregivers in a few taps, by video in minutes or at home in all five boroughs." />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>UpCare Mediconnect | Care for the whole family, right at your door</title>
 
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="assets/images/doctor-cutout.webp" />
+  <link rel="stylesheet" href="css/home.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <link rel="preload" as="image" href="assets/images/hero-doctor.jpg" />
-
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-circle-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></symbol>
+    <symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+    <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /><path d="m8.5 8.5 7 7" /></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /><path d="M12 5v14" /></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+    <symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></symbol>
+  </svg>
+
+  <svg width="0" height="0" class="sprite sprite--custom" aria-hidden="true" focusable="false">
+    <symbol id="s-heart" viewBox="0 0 32 32"><path d="M16 24c-.4 0-.8-.15-1.1-.43-1.5-1.35-2.9-2.55-4.15-3.6C7.2 17.1 5 15.25 5 12.4 5 10 6.9 8.1 9.3 8.1c1.4 0 2.75.65 3.6 1.7l3.1 3.65 3.1-3.65c.85-1.05 2.2-1.7 3.6-1.7 2.4 0 4.3 1.9 4.3 4.3 0 2.85-2.2 4.7-5.75 7.57-1.25 1.05-2.65 2.25-4.15 3.6-.3.28-.7.43-1.1.43z" /></symbol>
+    <symbol id="s-signal" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" /><rect x="5" y="5.5" width="3" height="6.5" rx="1" /><rect x="10" y="3" width="3" height="9" rx="1" /><rect x="15" y="0" width="3" height="12" rx="1" /></symbol>
+    <symbol id="s-wifi" viewBox="0 0 16 12"><path d="M8 2.6c2.3 0 4.4.9 6 2.4l1.2-1.3A10.5 10.5 0 0 0 8 .8 10.5 10.5 0 0 0 .8 3.7L2 5c1.6-1.5 3.7-2.4 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.7 6.7 0 0 0 8 4.4c-1.8 0-3.4.7-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c-.5 0-1 .2-1.3.5L8 11.5l1.3-1.3c-.3-.3-.8-.5-1.3-.5Z" /></symbol>
+    <symbol id="s-battery" viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4" /><rect x="2" y="2" width="20" height="8" rx="2" /><path d="M25 4v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2Z" opacity=".45" /></symbol>
+  </svg>
+
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header class="navbar">
-    <div class="container">
-
-      <a href="#" class="navbar__logo">
-        <i class="fa-solid fa-heart-pulse"></i>
-        <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+        <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+        <span class="logo__word">UpCare</span>
       </a>
 
-      <nav class="navbar__menu" id="navbarMenu">
-
-        <ul class="navbar__links">
-          <li><a href="#" class="is-active" aria-current="page">Home</a></li>
+      <nav class="navbar__menu" id="navbarMenu" aria-label="Primary">
+        <ul class="nav__links">
           <li class="navbar__dropdown">
             <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
-              Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              Services <svg class="icon dropdown-icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
             </button>
             <ul class="navbar__dropdown-menu" id="servicesMenu">
-              <li><a href="#services">Healthcare & Telehealth</a></li>
-              <li><a href="#services">Mental Health & Teletherapy</a></li>
-              <li><a href="#services">Childcare & ABA</a></li>
-              <li><a href="#services">Adult & Home Care</a></li>
+              <li><a href="telehealth.html"><strong>Primary care &amp; telehealth</strong><span>Check-ups, sick visits, prescriptions</span></a></li>
+              <li><a href="#services"><strong>Therapy &amp; mental health</strong><span>Weekly sessions by video</span></a></li>
+              <li><a href="#services"><strong>Home care</strong><span>Support for parents at home</span></a></li>
+              <li><a href="#services"><strong>Childcare &amp; ABA therapy</strong><span>For little ones and kids who learn differently</span></a></li>
             </ul>
           </li>
-          <li>
-            <a href="#" class="navbar__ai-pill">
-              <i class="fa-solid fa-robot"></i> AI Assistant
-            </a>
-          </li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#home-visits">Home visits</a></li>
+          <li><a href="#nurse">Nurse line</a></li>
+          <li><a href="#stories">Reviews</a></li>
         </ul>
 
-        <div class="navbar__actions">
-          <div class="navbar__dropdown">
-            <button type="button" class="navbar__lang" aria-expanded="false" aria-controls="langMenu">
-              <i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-            </button>
-            <ul class="navbar__dropdown-menu navbar__dropdown-menu--right" id="langMenu">
-              <li><a href="#">English</a></li>
-              <li><a href="#">বাংলা</a></li>
-              <li><a href="#">हिन्दी</a></li>
-              <li><a href="#">العربية</a></li>
-            </ul>
-          </div>
-          <a href="#" class="btn btn-primary">
-            Book Care <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#" class="navbar__login">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
-          </a>
+        <div class="nav__actions">
+          <a href="#" class="btn btn--ghost">Log in</a>
+          <a href="#book" class="btn btn--primary">Book a visit</a>
         </div>
-
       </nav>
 
-      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-controls="navbarMenu" aria-expanded="false">
-        <span></span>
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Open menu" aria-controls="navbarMenu" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
-
     </div>
   </header>
 
   <main id="main">
 
+    <!-- Hero -->
     <section class="hero">
-      <div class="container hero__container">
-        <div class="hero__content">
-          <span class="badge">
-            <i class="fa-solid fa-sparkles"></i> AI-Powered Healthcare Platform
-          </span>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <a href="#home-visits" class="announce" data-reveal>
+            <span class="announce__tag">New</span>
+            Same-day home visits in all five boroughs
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+          </a>
 
-          <h1 class="hero__title">
-            <span class="text-gradient">One Platform.</span>
-            <span>Every Care You Need.</span>
-          </h1>
+          <h1 class="hero__title" data-reveal>Care for the whole family, right at your door.</h1>
 
-          <p class="hero__subtitle">
-            AI-powered care for families, seniors, children, and individuals — at home or online.
+          <p class="hero__lede" data-reveal>
+            Book doctors, nurses, therapists and caregivers in a few taps. See someone by video in minutes,
+            or at home anywhere in New York City.
           </p>
 
-          <div class="hero__actions">
-            <a href="#" class="btn btn-primary btn-lg">
-              Book Care Now <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#services" class="btn btn-outline btn-lg">
-              <i class="fa-solid fa-magnifying-glass"></i> Explore Services
+          <div class="hero__actions" data-reveal>
+            <a href="#book" class="btn btn--primary btn--lg">Book a visit</a>
+            <a href="#how" class="btn btn--secondary btn--lg">
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-play" /></svg> See how it works
             </a>
           </div>
+
+          <div class="proof" data-reveal>
+            <div class="proof__faces" aria-hidden="true">
+              <img class="av av--photo" src="assets/images/avatars/denise.jpg" alt="" width="128" height="128" />
+              <img class="av av--photo" src="assets/images/avatars/james.jpg" alt="" width="128" height="128" />
+              <img class="av av--photo" src="assets/images/avatars/mei.jpg" alt="" width="128" height="128" />
+              <img class="av av--photo" src="assets/images/avatars/rosa.jpg" alt="" width="128" height="128" />
+            </div>
+            <div>
+              <p class="proof__stars" aria-label="Rated 4.9 out of 5">
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg>
+                <strong>4.9</strong>
+              </p>
+              <p class="proof__text">Trusted by 12,000+ New York families</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="hero__media">
-          <div class="hero__blob hero__blob--blue"></div>
-          <div class="hero__blob hero__blob--green"></div>
-          <img src="assets/images/hero-doctor.jpg" width="440" height="550" alt="Smiling doctor in a white coat with a stethoscope" class="hero__image" fetchpriority="high" />
+        <div class="hero__visual" data-reveal>
+          <div class="hero__stage" aria-hidden="true"></div>
+          <img class="hero__doctor" src="assets/images/doctor-cutout.webp" width="900" height="1371" alt="Dr. Amara Okafor, a family physician, smiling in a white coat with a stethoscope" />
+
+          <!-- App home screen -->
+          <div class="phone phone--hero" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+              <div class="app">
+                <div class="app__hello">
+                  <div>
+                    <p class="app__muted">Good morning,</p>
+                    <p class="app__h1">Maria</p>
+                  </div>
+                  <span class="av av--blue av--sm">MR</span>
+                </div>
+
+                <p class="app__label">Who needs care?</p>
+                <div class="fam">
+                  <span class="fam__item"><span class="av av--blue av--sm">MR</span>Me</span>
+                  <span class="fam__item is-on"><span class="av av--rose av--sm">RS</span>Mom</span>
+                  <span class="fam__item"><span class="av av--amber av--sm">LE</span>Leo</span>
+                  <span class="fam__item fam__item--add"><span class="fam__plus"><svg class="icon"><use href="#i-plus" /></svg></span>Add</span>
+                </div>
+
+                <p class="app__label">Upcoming</p>
+                <div class="app-card visit">
+                  <img src="assets/images/hero-doctor.jpg" alt="" width="1200" height="1800" />
+                  <div class="visit__info">
+                    <strong>Dr. Okafor</strong>
+                    <span>Video · 2:15 PM</span>
+                  </div>
+                  <span class="mini-btn">Join</span>
+                </div>
+
+                <p class="app__label">Get care</p>
+                <div class="quick">
+                  <span class="quick__item"><span class="quick__icon quick__icon--blue"><svg class="icon"><use href="#i-video" /></svg></span>Video</span>
+                  <span class="quick__item"><span class="quick__icon quick__icon--green"><svg class="icon"><use href="#i-house" /></svg></span>Home</span>
+                  <span class="quick__item"><span class="quick__icon quick__icon--violet"><svg class="icon"><use href="#i-message-circle" /></svg></span>Nurse</span>
+                  <span class="quick__item"><span class="quick__icon quick__icon--amber"><svg class="icon"><use href="#i-pill" /></svg></span>Refills</span>
+                </div>
+              </div>
+              <div class="tabbar">
+                <span class="is-on"><svg class="icon"><use href="#i-house" /></svg>Home</span>
+                <span><svg class="icon"><use href="#i-calendar" /></svg>Visits</span>
+                <span><svg class="icon"><use href="#i-message-circle" /></svg>Messages</span>
+                <span><svg class="icon"><use href="#i-user" /></svg>Profile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="notif" aria-hidden="true">
+            <span class="notif__app"><svg><use href="#s-heart" /></svg></span>
+            <div>
+              <p class="notif__top"><strong>UpCare</strong><span>now</span></p>
+              <p>Dana Reyes, RN is 5 min away. She'll ring the buzzer for 4B.</p>
+            </div>
+          </div>
+
+          <div class="rating-chip" aria-hidden="true">
+            <span class="rating-chip__dot"></span>
+            <div>
+              <strong>Available today</strong>
+              <span>Family medicine · Queens</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="why-choose">
+    <!-- Key numbers -->
+    <section class="numbers" aria-label="UpCare at a glance">
       <div class="container">
-        <div class="section-heading">
-          <h2>Why Choose UpCare?</h2>
-          <p>Experience the future of healthcare with our comprehensive, AI-powered platform.</p>
-        </div>
-
-        <div class="why-choose__grid">
-          <div class="feature-card">
-            <div class="feature-card__icon feature-card__icon--blue"><i class="fa-solid fa-robot"></i></div>
-            <h3>AI Assistance</h3>
-            <p>Smart matching and 24/7 AI support for better care decisions.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card__icon feature-card__icon--green"><i class="fa-solid fa-globe"></i></div>
-            <h3>Multilingual</h3>
-            <p>Care in English, Bengali, Hindi, and Arabic for your comfort.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card__icon feature-card__icon--blue"><i class="fa-solid fa-house-medical"></i></div>
-            <h3>In-Home & Virtual</h3>
-            <p>Flexible care options that fit your lifestyle and preferences.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card__icon feature-card__icon--purple"><i class="fa-solid fa-people-roof"></i></div>
-            <h3>From Child to Elder Care</h3>
-            <p>Comprehensive care solutions for every family member.</p>
-          </div>
-        </div>
+        <dl class="numbers__row">
+          <div><dt>Average wait for a video visit</dt><dd>12 min</dd></div>
+          <div><dt>Home visits in every borough</dt><dd>Same day</dd></div>
+          <div><dt>Licensed clinicians on UpCare</dt><dd>1,200+</dd></div>
+          <div><dt>In network with</dt><dd class="numbers__small">Medicaid, Medicare &amp; most NY plans</dd></div>
+        </dl>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- Services -->
+    <section class="section services" id="services">
       <div class="container">
-        <div class="section-heading">
-          <h2>Our Care Services</h2>
-          <p>Comprehensive healthcare solutions tailored to your family's unique needs.</p>
+        <div class="section__head section__head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Services</p>
+            <h2 class="section__title" data-reveal>One app for every kind of care</h2>
+            <p class="section__sub" data-reveal>From a sick day to long-term support, book the right person for anyone in your family.</p>
+          </div>
+
+          <div class="who" data-reveal>
+            <p class="who__label" id="whoLabel">Who needs care?</p>
+            <div class="segmented" role="group" aria-labelledby="whoLabel">
+              <button type="button" class="segmented__btn" data-who="all" aria-pressed="true">Everyone</button>
+              <button type="button" class="segmented__btn" data-who="me" aria-pressed="false">Me</button>
+              <button type="button" class="segmented__btn" data-who="child" aria-pressed="false">My kids</button>
+              <button type="button" class="segmented__btn" data-who="parent" aria-pressed="false">My parents</button>
+            </div>
+            <p class="who__status" id="whoStatus" aria-live="polite">Showing all 5 services</p>
+
+          </div>
         </div>
 
-        <div class="services__grid">
-          <article class="service-card service-card--blue">
-            <div class="service-card__icon"><i class="fa-solid fa-stethoscope"></i></div>
-            <h3>Healthcare & Telehealth</h3>
-            <p>Complete medical care with virtual consultations and in-person visits.</p>
-            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="svc-grid">
+          <article class="svc" data-for="me child parent" data-reveal>
+            <div class="svc__media"><img src="assets/images/hero-doctor.jpg" alt="" loading="lazy" width="1200" height="1800" /></div>
+            <div class="svc__body">
+              <ul class="tags"><li>Video</li><li>Home</li><li>Clinic</li></ul>
+              <h3>Primary care &amp; telehealth</h3>
+              <p>Check-ups, prescriptions and same-day sick visits for every age.</p>
+              <a href="telehealth.html" class="svc__link">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+            </div>
           </article>
-          <article class="service-card service-card--purple">
-            <div class="service-card__icon"><i class="fa-solid fa-brain"></i></div>
-            <h3>Mental Health & Teletherapy</h3>
-            <p>Professional mental health support through secure online sessions.</p>
-            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+
+          <article class="svc" data-for="me child parent" data-reveal>
+            <div class="svc__media"><img src="assets/images/window.jpg" alt="" loading="lazy" width="900" height="686" /></div>
+            <div class="svc__body">
+              <ul class="tags"><li>Video</li><li>Clinic</li></ul>
+              <h3>Therapy &amp; mental health</h3>
+              <p>Weekly sessions with licensed therapists for teens and adults, evenings included.</p>
+              <a href="#" class="svc__link">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+            </div>
           </article>
-          <article class="service-card service-card--teal">
-            <div class="service-card__icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <h3>Adult & Home Care</h3>
-            <p>Senior, post-op, and daily-living support delivered at home.</p>
-            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+
+          <article class="svc" data-for="me parent" data-reveal>
+            <div class="svc__media"><img src="assets/images/elder-walk.jpg" alt="" loading="lazy" width="900" height="1350" /></div>
+            <div class="svc__body">
+              <ul class="tags"><li>Home</li></ul>
+              <h3>Home care for older adults</h3>
+              <p>Help after surgery, daily support and company for parents and grandparents.</p>
+              <a href="#" class="svc__link">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+            </div>
           </article>
-          <article class="service-card service-card--pink">
-            <div class="service-card__icon"><i class="fa-solid fa-child-reaching"></i></div>
-            <h3>Childcare</h3>
-            <p>Safe, nurturing care for children with qualified professionals.</p>
-            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+
+          <article class="svc svc--wide" data-for="child" data-reveal>
+            <div class="svc__media"><img src="assets/images/kid-red-coat.jpg" alt="" loading="lazy" width="900" height="600" /></div>
+            <div class="svc__body">
+              <ul class="tags"><li>Home</li></ul>
+              <h3>Childcare</h3>
+              <p>Background-checked sitters for the days when school and work don't line up.</p>
+              <a href="#" class="svc__link">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+            </div>
           </article>
-          <article class="service-card service-card--orange">
-            <div class="service-card__icon"><i class="fa-solid fa-puzzle-piece"></i></div>
-            <h3>Special Childcare (ABA)</h3>
-            <p>Specialized ABA therapy for children with developmental needs.</p>
-            <a href="#" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+
+          <article class="svc svc--wide" data-for="child" data-reveal>
+            <div class="svc__media"><img class="svc__img--low" src="assets/images/hand-in-hand.jpg" alt="" loading="lazy" width="900" height="1350" /></div>
+            <div class="svc__body">
+              <ul class="tags"><li>Home</li><li>Clinic</li></ul>
+              <h3>ABA therapy</h3>
+              <p>Board-certified therapists who work with your child at home, and coach you too.</p>
+              <a href="#" class="svc__link">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="ai-assistant">
-      <div class="container ai-assistant__container">
-        <div class="ai-assistant__content">
-          <span class="badge badge--white">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> AI-Powered Assistant
-          </span>
+    <!-- How it works -->
+    <section class="section how" id="how">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>How it works</p>
+          <h2 class="section__title" data-reveal>Booking care takes about a minute</h2>
+          <p class="section__sub" data-reveal>Three short steps. No phone trees, no waiting rooms.</p>
+        </div>
 
-          <h2>Smart Health Triage & Care Recommendations</h2>
+        <ol class="flow">
+          <!-- Step 1 -->
+          <li class="flow__step" data-reveal>
+            <div class="phone phone--sm" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+                <div class="app">
+                  <div class="app__top"><svg class="icon"><use href="#i-chevron-left" /></svg><span>Book a visit</span><span class="app__step">1/3</span></div>
+                  <div class="progress"><span style="width:33%"></span></div>
+                  <p class="app__h2">Who is this visit for?</p>
+                  <div class="pick">
+                    <span class="pick__row"><span class="av av--blue av--sm">MR</span><span><strong>Me</strong><em>Maria, 38</em></span><span class="radio"></span></span>
+                    <span class="pick__row is-on"><span class="av av--rose av--sm">RS</span><span><strong>Mom</strong><em>Rosa, 72</em></span><span class="radio"></span></span>
+                    <span class="pick__row"><span class="av av--amber av--sm">LE</span><span><strong>Leo</strong><em>6 years</em></span><span class="radio"></span></span>
+                  </div>
+                  <p class="app__label">What's going on?</p>
+                  <span class="field">Fever since last night, about 101°. Tired, bad headache.</span>
+                  <span class="app__cta">Continue</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow__text">
+              <span class="flow__num">1</span>
+              <h3>Tell us who it's for</h3>
+              <p>Add your parents and kids to one account, then pick who needs care and describe what's going on.</p>
+            </div>
+          </li>
 
-          <p>
-            Our AI assistant provides instant symptom assessment, care recommendations, and
-            seamlessly connects you with the right healthcare providers.
-          </p>
+          <!-- Step 2 -->
+          <li class="flow__step" data-reveal>
+            <div class="phone phone--sm" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+                <div class="app">
+                  <div class="app__top"><svg class="icon"><use href="#i-chevron-left" /></svg><span>Book a visit</span><span class="app__step">2/3</span></div>
+                  <div class="progress"><span style="width:66%"></span></div>
+                  <p class="app__h2">How would you like to be seen?</p>
+                  <div class="seg-mini"><span>Video</span><span class="is-on">Home visit</span></div>
+                  <p class="app__label">Available today near Astoria</p>
+                  <div class="app-card clin is-on">
+                    <span class="av av--green av--sm">DR</span>
+                    <div><strong>Dana Reyes, RN</strong><em>Arrives 3:30–4:00 PM</em></div>
+                    <span class="radio"></span>
+                  </div>
+                  <div class="app-card clin">
+                    <img src="assets/images/hero-doctor.jpg" alt="" width="1200" height="1800" />
+                    <div><strong>Dr. Amara Okafor</strong><em>Arrives 5:00–5:30 PM</em></div>
+                    <span class="radio"></span>
+                  </div>
+                  <div class="cover"><svg class="icon"><use href="#i-shield-check" /></svg><span>Covered by Medicaid. <strong>$0 copay</strong></span></div>
+                  <span class="app__cta">Confirm visit</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow__text">
+              <span class="flow__num">2</span>
+              <h3>Pick video or a home visit</h3>
+              <p>See real availability near you, and what your insurance covers, before you confirm.</p>
+            </div>
 
-          <ul class="check-list">
-            <li><i class="fa-solid fa-circle-check"></i> 24/7 symptom triage and guidance</li>
-            <li><i class="fa-solid fa-circle-check"></i> Smart provider matching based on needs</li>
-            <li><i class="fa-solid fa-circle-check"></i> Instant appointment scheduling</li>
+          </li>
+
+          <!-- Step 3 -->
+          <li class="flow__step" data-reveal>
+            <div class="phone phone--sm" aria-hidden="true">
+              <div class="phone__screen phone__screen--map">
+                <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+                <svg class="map" viewBox="0 0 260 250" preserveAspectRatio="xMidYMid slice">
+                  <rect width="260" height="250" fill="#E8EDF4" />
+                  <g fill="#FFFFFF">
+                    <rect x="-10" y="10" width="62" height="44" rx="4" /><rect x="64" y="10" width="62" height="44" rx="4" /><rect x="138" y="10" width="62" height="44" rx="4" /><rect x="212" y="10" width="62" height="44" rx="4" />
+                    <rect x="-10" y="66" width="62" height="44" rx="4" /><rect x="64" y="66" width="62" height="44" rx="4" /><rect x="212" y="66" width="62" height="44" rx="4" />
+                    <rect x="-10" y="122" width="62" height="44" rx="4" /><rect x="64" y="122" width="62" height="44" rx="4" /><rect x="138" y="122" width="62" height="44" rx="4" /><rect x="212" y="122" width="62" height="44" rx="4" />
+                    <rect x="-10" y="178" width="62" height="44" rx="4" /><rect x="138" y="178" width="62" height="44" rx="4" /><rect x="212" y="178" width="62" height="44" rx="4" />
+                  </g>
+                  <rect x="138" y="66" width="62" height="44" rx="4" fill="#CDEBD8" />
+                  <rect x="64" y="178" width="62" height="44" rx="4" fill="#CDEBD8" />
+                  <path d="M30 228V172h102V116h74V60" fill="none" stroke="#1D6CE0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="30" cy="228" r="7" fill="#FFFFFF" stroke="#1D6CE0" stroke-width="3" />
+                  <circle cx="206" cy="60" r="10" fill="#1D6CE0" /><circle cx="206" cy="60" r="4" fill="#FFFFFF" />
+                </svg>
+                <div class="sheet">
+                  <span class="sheet__grab"></span>
+                  <p class="app__muted">Home visit · 31st Ave, Astoria</p>
+                  <p class="app__h2">Dana is on her way</p>
+                  <div class="eta"><span>Arriving in</span><strong>12 min</strong></div>
+                  <div class="app-card clin">
+                    <span class="av av--green av--sm">DR</span>
+                    <div><strong>Dana Reyes, RN</strong><em>Registered nurse</em></div>
+                    <span class="round-btn"><svg class="icon"><use href="#i-phone" /></svg></span>
+                  </div>
+                  <p class="prep"><svg class="icon"><use href="#i-circle-check" /></svg> Have Mom's medication list ready</p>
+                </div>
+              </div>
+            </div>
+            <div class="flow__text">
+              <span class="flow__num">3</span>
+              <h3>Know exactly when they'll arrive</h3>
+              <p>Follow your nurse to the door and get a heads-up on anything to prepare.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Home visits -->
+    <section class="section visits" id="home-visits">
+      <div class="container visits__grid">
+        <div class="visits__media" data-reveal>
+          <img src="assets/images/stoop.jpg" alt="Stone steps with iron railings leading up to the front door of a New York brownstone" loading="lazy" width="1200" height="1600" />
+          <div class="arrive" aria-hidden="true">
+            <span class="arrive__icon"><svg class="icon"><use href="#i-map-pin" /></svg></span>
+            <div>
+              <strong>Dana has arrived</strong>
+              <span>Home visit · 3:41 PM</span>
+            </div>
+            <span class="arrive__badge">On time</span>
+          </div>
+          <p class="visits__credit">Photo: Artem Danilchick / Unsplash</p>
+        </div>
+
+        <div class="visits__body">
+          <p class="eyebrow" data-reveal>Home visits</p>
+          <h2 class="section__title" data-reveal>House calls in every borough. Yes, even fifth-floor walk-ups.</h2>
+          <p class="section__sub" data-reveal>Nurses and doctors come to apartments, brownstones and high-rises for check-ups, recovery after surgery, vaccines and lab work.</p>
+
+          <ul class="boroughs" data-reveal>
+            <li><span>Queens</span><span class="badge badge--green">Same day</span></li>
+            <li><span>Brooklyn</span><span class="badge badge--green">Same day</span></li>
+            <li><span>The Bronx</span><span class="badge badge--green">Same day</span></li>
+            <li><span>Manhattan</span><span class="badge badge--green">Same day</span></li>
+            <li><span>Staten Island</span><span class="badge badge--blue">Next day</span></li>
           </ul>
 
-          <div class="ai-assistant__stats">
-            <div class="ai-assistant__stat">
-              <strong>&lt; 60s</strong>
-              <span>Average response time</span>
-            </div>
-            <div class="ai-assistant__stat">
-              <strong>50k+</strong>
-              <span>Symptoms triaged</span>
-            </div>
-            <div class="ai-assistant__stat">
-              <strong>24/7</strong>
-              <span>Always available</span>
-            </div>
-          </div>
+          <a href="#" class="text-link" data-reveal>Check your address <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
 
-          <a href="#" class="btn btn-primary">
-            Try AI Assistant <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="ai-assistant__media">
-          <div class="ai-assistant__blob ai-assistant__blob--blue"></div>
-          <div class="ai-assistant__blob ai-assistant__blob--green"></div>
-
-          <div class="chat-card" aria-hidden="true">
-            <div class="chat-card__header">
-              <div class="chat-card__avatar"><i class="fa-solid fa-robot"></i></div>
-              <div>
-                <strong>UpCare AI Assistant</strong>
-                <span>Always here to help</span>
-              </div>
-              <span class="chat-card__status"></span>
-            </div>
-
-            <div class="chat-card__body">
-              <div class="chat-bubble chat-bubble--user">
-                <p>I have a headache and fever for 2 days</p>
-                <span>2:30 PM</span>
-              </div>
-
-              <div class="chat-bubble chat-bubble--ai">
-                <span class="chat-bubble__label"><i class="fa-solid fa-robot"></i> AI Assistant</span>
-                <p>I understand you're experiencing headache and fever. Based on your symptoms, I recommend:</p>
-
-                <p class="chat-bubble__heading">Immediate Care Options</p>
-                <ul class="chat-bubble__list">
-                  <li>Virtual consultation with Dr. Sarah <em>(available now)</em></li>
-                  <li>Urgent care visit at UpCare Center <em>(15 min drive)</em></li>
-                </ul>
-
-                <p class="chat-bubble__heading">Symptom Management</p>
-                <ul class="chat-bubble__list">
-                  <li>Stay hydrated and rest in a cool, quiet room</li>
-                  <li>Take acetaminophen for fever if needed</li>
-                </ul>
-
-                <span>2:31 PM</span>
-              </div>
-
-              <div class="chat-bubble chat-bubble--typing">
-                <span class="chat-bubble__label"><i class="fa-solid fa-robot"></i> AI Assistant</span>
-                <span class="typing-dots"><span></span><span></span><span></span></span>
-              </div>
-            </div>
-
-            <div class="chat-card__input">
-              <input type="text" placeholder="Type your symptoms or health questions..." disabled />
-              <button type="button" aria-label="Send message" disabled><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-          </div>
-
-          <p class="ai-assistant__trust"><i class="fa-solid fa-lock"></i> HIPAA-compliant & encrypted conversations</p>
         </div>
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Success Stories</span>
-          <h2>What Our Families Say</h2>
-          <p>Join thousands of families who trust UpCare Mediconnect for their healthcare needs</p>
+    <!-- Nurse line -->
+    <section class="section nurse" id="nurse">
+      <div class="container nurse__grid">
+        <div class="nurse__copy">
+          <p class="eyebrow" data-reveal>Nurse line</p>
+          <h2 class="section__title" data-reveal>Text a nurse, day or night</h2>
+          <p class="section__sub" data-reveal>Describe what's going on. Our assistant asks a few quick questions, then a licensed nurse takes over, usually within two minutes.</p>
+
+          <ul class="features" data-reveal>
+            <li>
+              <span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+              <div><strong>A real nurse reads every chat</strong><p>The assistant gathers details so the nurse can help faster.</p></div>
+            </li>
+            <li>
+              <span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg></span>
+              <div><strong>Urgent symptoms get 911 guidance</strong><p>Chest pain, trouble breathing or confusion are flagged right away.</p></div>
+            </li>
+            <li>
+              <span class="features__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield-check" /></svg></span>
+              <div><strong>Private and HIPAA compliant</strong><p>Your conversations are encrypted and stay in your health record.</p></div>
+            </li>
+          </ul>
+
+          <p class="nurse__warn"><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg> Not for emergencies. If someone is in danger, call 911.</p>
         </div>
 
-        <div class="testimonials__grid">
-          <article class="testimonial-card">
-            <div class="testimonial-card__stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <i class="fa-solid fa-quote-left testimonial-card__quote-icon"></i>
-            <p>UpCare Mediconnect transformed how we access healthcare. The AI assistant helped me find the right specialist for my father's condition in minutes, not days.</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar"><i class="fa-solid fa-user"></i></div>
-              <div>
-                <strong>Maria Rodriguez</strong>
-                <span>Family Caregiver</span>
-                <span><i class="fa-solid fa-location-dot"></i> New York</span>
+        <figure class="nurse__visual" data-reveal>
+          <figcaption class="visually-hidden">
+            Example chat: a family member says their 72-year-old mother has had a fever since last night. The assistant asks about
+            urgent symptoms, then Dana Reyes, a registered nurse, joins and offers a video visit at 2:15 or a nurse at the door in Astoria by 4.
+          </figcaption>
+          <div class="phone phone--chat" id="chatPhone" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+              <div class="chat__head">
+                <svg class="icon"><use href="#i-chevron-left" /></svg>
+                <span class="chat__logo"><svg><use href="#s-heart" /></svg></span>
+                <div><strong>Nurse line</strong><span>Usually replies in 2 min</span></div>
+              </div>
+              <div class="chat__body">
+                <p class="chat__day">Today 1:52 PM</p>
+                <p class="msg msg--me" style="--i:0">My mom's had a fever since last night. 101°. She's 72.</p>
+                <p class="msg msg--them" style="--i:1">Thanks for reaching out. Is she having any trouble breathing, chest pain, or confusion?</p>
+                <p class="msg msg--me" style="--i:2">No. Just tired and a bad headache.</p>
+                <p class="chat__join" style="--i:3"><span class="av av--green av--xs">DR</span> Dana Reyes, RN joined the chat</p>
+                <p class="msg msg--them msg--rn" style="--i:4">Hi, I'm Dana. Dr. Okafor can see her by video at 2:15, or I can be at her door in Astoria by 4. Which is easier?</p>
+                <p class="msg msg--me" style="--i:5">The home visit, please. She hates video calls.</p>
+              </div>
+              <div class="chat__input">
+                <span>Message</span>
+                <span class="chat__send"><svg class="icon"><use href="#i-arrow-up" /></svg></span>
               </div>
             </div>
-          </article>
+          </div>
 
-          <article class="testimonial-card">
-            <div class="testimonial-card__stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <i class="fa-solid fa-quote-left testimonial-card__quote-icon"></i>
-            <p>As a working mother, having multilingual support and home care options has been life-changing. The quality of care is exceptional, and the convenience is unmatched.</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar"><i class="fa-solid fa-user"></i></div>
-              <div>
-                <strong>Fatima Al-Hassan</strong>
-                <span>Working Mother</span>
-                <span><i class="fa-solid fa-location-dot"></i> New Jersey</span>
-              </div>
-            </div>
-          </article>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section stories" id="stories">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>Reviews</p>
+          <h2 class="section__title" data-reveal>Loved by New York families</h2>
+        </div>
+
+        <div class="reviews">
+          <figure class="review" data-reveal>
+            <p class="review__stars" aria-label="5 out of 5 stars"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg></p>
+            <blockquote><p>My mom lives on the fourth floor in Bed-Stuy and hasn't done stairs since her hip surgery. The nurse came up, checked everything, and stayed long enough to make her laugh.</p></blockquote>
+            <figcaption><img class="av av--photo" src="assets/images/avatars/denise.jpg" alt="" width="128" height="128" loading="lazy" /><span><strong>Denise W.</strong>Bedford-Stuyvesant, Brooklyn</span></figcaption>
+          </figure>
+
+          <figure class="review" data-reveal>
+            <p class="review__stars" aria-label="5 out of 5 stars"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg></p>
+            <blockquote><p>Fever at 11 p.m., video visit by 11:20. Nobody had to ride the 7 train with a sick kid. I've told every parent at Leo's school.</p></blockquote>
+            <figcaption><img class="av av--photo" src="assets/images/avatars/mei.jpg" alt="" width="128" height="128" loading="lazy" /><span><strong>Mei L.</strong>Flushing, Queens</span></figcaption>
+          </figure>
+
+          <figure class="review" data-reveal>
+            <p class="review__stars" aria-label="5 out of 5 stars"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star" /></svg></p>
+            <blockquote><p>Our ABA therapist comes to the apartment, so my son practices in the place he actually lives. Scheduling around my shifts is finally easy.</p></blockquote>
+            <figcaption><img class="av av--photo" src="assets/images/avatars/rosa.jpg" alt="" width="128" height="128" loading="lazy" /><span><strong>Rosa M.</strong>Washington Heights, Manhattan</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="how-it-works">
+    <!-- CTA -->
+    <section class="cta" id="book">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Simple Process</span>
-          <h2>How It Works</h2>
-          <p>Getting the care you need has never been easier. Follow these simple steps.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step__icon">
-              <span class="step__number">01</span>
-              <i class="fa-solid fa-user-group"></i>
+        <div class="cta__panel" data-reveal>
+          <div class="cta__copy">
+            <h2>Your family's care team, in your pocket</h2>
+            <p>Create a free account and book your first visit today. Most families are seen the same day.</p>
+            <div class="cta__actions">
+              <a href="#" class="btn btn--white btn--lg">Book a visit</a>
+              <a href="tel:+12125550147" class="btn btn--outline-white btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg> (212) 555-0147</a>
             </div>
-            <h3>Get Matched</h3>
-            <p>Our AI instantly matches you with qualified care providers based on your specific needs, location, and preferences.</p>
           </div>
 
-          <div class="step">
-            <div class="step__icon">
-              <span class="step__number">02</span>
-              <i class="fa-solid fa-calendar-check"></i>
+          <div class="cta__phone" aria-hidden="true">
+            <div class="phone phone--cta">
+              <div class="phone__screen">
+                <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sys"><svg><use href="#s-signal" /></svg><svg><use href="#s-wifi" /></svg><svg class="bat"><use href="#s-battery" /></svg></span></div>
+                <div class="app app--done">
+                  <span class="done__check"><svg class="icon"><use href="#i-check" /></svg></span>
+                  <p class="app__h2">Visit confirmed</p>
+                  <p class="app__muted">We'll text you when Dana is on her way.</p>
+                  <div class="app-card done__card">
+                    <p><span>Who</span><strong>Mom (Rosa, 72)</strong></p>
+                    <p><span>Clinician</span><strong>Dana Reyes, RN</strong></p>
+                    <p><span>When</span><strong>Today, 3:30–4:00 PM</strong></p>
+                    <p><span>Where</span><strong>31st Ave, Apt 4B</strong></p>
+                  </div>
+                  <span class="app__cta app__cta--ghost">Add to calendar</span>
+                </div>
+              </div>
             </div>
-            <h3>Book Care</h3>
-            <p>Schedule your appointment online or request in-home care with flexible timing that works for your family.</p>
-          </div>
-
-          <div class="step">
-            <div class="step__icon">
-              <span class="step__number">03</span>
-              <i class="fa-solid fa-headset"></i>
-            </div>
-            <h3>Ongoing Support</h3>
-            <p>Receive continuous care coordination, follow-ups, and 24/7 AI assistance for all your healthcare needs.</p>
           </div>
         </div>
+
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="#" class="navbar__logo">
-          <i class="fa-solid fa-heart-pulse"></i>
-          <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
-        </a>
-        <p>One platform for every care you need. AI-powered healthcare for families, seniors, children, and individuals.</p>
-        <div class="footer__socials">
-          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+            <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+            <span class="logo__word">UpCare</span>
+          </a>
+          <p>Home and virtual care for New York families, in all five boroughs.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="UpCare on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg></a>
+            <a href="#" aria-label="UpCare on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook" /></svg></a>
+            <a href="#" aria-label="UpCare on LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h2>Care</h2>
+          <ul>
+            <li><a href="telehealth.html">Primary care &amp; telehealth</a></li>
+            <li><a href="#services">Therapy &amp; mental health</a></li>
+            <li><a href="#services">Home care</a></li>
+            <li><a href="#services">Childcare &amp; ABA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="#">Log in / Sign up</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Insurance we accept</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">HIPAA notice</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer__col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#">Healthcare & Telehealth</a></li>
-          <li><a href="#">Mental Health</a></li>
-          <li><a href="#">Childcare & ABA</a></li>
-          <li><a href="#">Homecare</a></li>
-        </ul>
-      </div>
+      <p class="footer__emergency">
+        <svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg>
+        UpCare is not an emergency service. If you or someone else is in danger, call 911.
+      </p>
 
-      <div class="footer__col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">HIPAA Compliance</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Login / Sign Up</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">24/7 Support</a></li>
-          <li><a href="#">Emergency Care</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>&copy; 2026 UpCare Mediconnect. All rights reserved.</p>
-        <div class="footer__badges">
-          <span class="chip">HIPAA Compliant</span>
-          <span class="chip">AI-Powered</span>
-        </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 UpCare Mediconnect, New York, NY</p>
+        <p>Photos via Unsplash: Artem Danilchick, Razvan Sassu, Bianca Jordan, Howard Weiss, XS Xue · Avatars via randomuser.me</p>
       </div>
     </div>
   </footer>
 
+
   <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

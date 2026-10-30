@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Healthcare & Telehealth services at UpCare Mediconnect — primary care, telehealth consultations, prescriptions, and medical departments with trusted doctors." />
+  <meta name="theme-color" content="#2F7DF4" />
+  <title>Healthcare & Telehealth Services | UpCare Mediconnect</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/telehealth.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <div class="container">
+
+      <a href="index.html" class="navbar__logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+      </a>
+
+      <nav class="navbar__menu" id="navbarMenu">
+
+        <ul class="navbar__links">
+          <li><a href="index.html">Home</a></li>
+          <li class="navbar__dropdown">
+            <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
+              Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </button>
+            <ul class="navbar__dropdown-menu" id="servicesMenu">
+              <li><a href="telehealth.html" class="is-active" aria-current="page">Healthcare & Telehealth</a></li>
+              <li><a href="index.html#services">Mental Health & Teletherapy</a></li>
+              <li><a href="index.html#services">Childcare & ABA</a></li>
+              <li><a href="index.html#services">Adult & Home Care</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="navbar__ai-pill">
+              <i class="fa-solid fa-robot"></i> AI Assistant
+            </a>
+          </li>
+        </ul>
+
+        <div class="navbar__actions">
+          <div class="navbar__dropdown">
+            <button type="button" class="navbar__lang" aria-expanded="false" aria-controls="langMenu">
+              <i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </button>
+            <ul class="navbar__dropdown-menu navbar__dropdown-menu--right" id="langMenu">
+              <li><a href="#">English</a></li>
+              <li><a href="#">বাংলা</a></li>
+              <li><a href="#">हिन्दी</a></li>
+              <li><a href="#">العربية</a></li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn-primary">
+            Book Care <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#" class="navbar__login">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+          </a>
+        </div>
+
+      </nav>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-controls="navbarMenu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="th-hero">
+      <div class="container th-hero__container">
+        <h1>Healthcare & Telehealth Services</h1>
+        <p>One Platform. Every Care You Need.</p>
+        <a href="#departments" class="btn btn-primary btn-lg">
+          Book Appointment <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="th-about">
+      <div class="container th-about__grid">
+        <div class="th-about__content">
+          <span class="eyebrow">About Our Healthcare Services</span>
+          <p>UpCare Mediconnect connects you with licensed doctors and specialists, offering in-person and telehealth services. From preventive checkups to urgent consultations, we ensure care is accessible, affordable, and personalized.</p>
+          <p>Consult with doctors online securely, manage prescriptions, and receive follow-up care from the comfort of your home.</p>
+        </div>
+        <div class="th-about__media">
+          <img src="assets/images/hero-doctor.jpg" alt="Smiling female doctor holding a tablet" loading="lazy" width="440" height="330" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Service types -->
+    <section class="th-types">
+      <div class="container">
+        <h2 class="th-section-title">Types of Healthcare Services</h2>
+
+        <div class="th-types__grid">
+          <div class="th-type-card">
+            <div class="th-type-card__icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Primary Care</h3>
+            <p>General checkups & family medicine</p>
+          </div>
+          <div class="th-type-card">
+            <div class="th-type-card__icon"><i class="fa-solid fa-video"></i></div>
+            <h3>Telehealth Consultations</h3>
+            <p>Video calls with doctors & specialists</p>
+          </div>
+          <div class="th-type-card">
+            <div class="th-type-card__icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+            <h3>Prescription & Medication Management</h3>
+            <p>Digital prescriptions</p>
+          </div>
+          <div class="th-type-card">
+            <div class="th-type-card__icon"><i class="fa-solid fa-truck-medical"></i></div>
+            <h3>Urgent Care</h3>
+            <p>Quick non-emergency treatment</p>
+          </div>
+          <div class="th-type-card">
+            <div class="th-type-card__icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Chronic Condition Care</h3>
+            <p>Diabetes, hypertension, asthma, etc.</p>
+          </div>
+          <div class="th-type-card">
+            <div class="th-type-card__icon"><i class="fa-solid fa-syringe"></i></div>
+            <h3>Preventive Health & Vaccinations</h3>
+            <p>Wellness checks & immunizations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="th-departments" id="departments">
+      <div class="container">
+        <h2 class="th-section-title">Medical Departments & Doctors</h2>
+
+        <!-- Cardiology -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Cardiologist" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-heart-pulse dept__icon dept__icon--red"></i> Cardiology</h3>
+            <p class="dept__desc">Heart care, diagnostics, and treatment of cardiovascular conditions</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=sarah-johnson">Dr. Sarah Johnson</a></h4>
+                <span>Cardiologist</span>
+                <p>15+ years experience in interventional & general cardiology</p>
+                <a href="doctor.html?id=sarah-johnson" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=ahmed-khan">Dr. Ahmed Khan</a></h4>
+                <span>Interventional Cardiologist</span>
+                <p>12+ years, specializes in angioplasty & stents</p>
+                <a href="doctor.html?id=ahmed-khan" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=lisa-chen">Dr. Lisa Chen</a></h4>
+                <span>Cardiac Surgeon</span>
+                <p>20+ years, expert in heart valve & bypass surgery</p>
+                <a href="doctor.html?id=lisa-chen" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=robert-williams">Dr. Robert Williams</a></h4>
+                <span>Electrophysiologist</span>
+                <p>10+ years, specializes in heart rhythm disorders</p>
+                <a href="doctor.html?id=robert-williams" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=maria-torres">Dr. Maria Torres</a></h4>
+                <span>Preventive Cardiologist</span>
+                <p>8+ years, focus on lifestyle & risk reduction</p>
+                <a href="doctor.html?id=maria-torres" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Neurology -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Neurologist reviewing brain scans" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-brain dept__icon dept__icon--purple"></i> Neurology</h3>
+            <p class="dept__desc">Diagnose and treatment of brain, spinal cord, and nervous system disorders</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=emily-parker">Dr. Emily Parker</a></h4>
+                <span>Neurologist</span>
+                <p>14+ years, specializes in migraine & epilepsy</p>
+                <a href="doctor.html?id=emily-parker" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=raul-mehta">Dr. Raul Mehta</a></h4>
+                <span>Neurosurgeon</span>
+                <p>18+ years, expert in spinal & brain surgery</p>
+                <a href="doctor.html?id=raul-mehta" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=jennifer-adams">Dr. Jennifer Adams</a></h4>
+                <span>Stroke Specialist</span>
+                <p>11+ years, focus on stroke prevention & recovery</p>
+                <a href="doctor.html?id=jennifer-adams" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=hassan-ali">Dr. Hassan Ali</a></h4>
+                <span>Pediatric Neurologist</span>
+                <p>9+ years, specializes in pediatric & adolescent care</p>
+                <a href="doctor.html?id=hassan-ali" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=susan-martinez">Dr. Susan Martinez</a></h4>
+                <span>Movement Disorder Specialist</span>
+                <p>13+ years, focus on Parkinson's & tremor disorders</p>
+                <a href="doctor.html?id=susan-martinez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pediatrics -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Family with child and pediatrician" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-child-reaching dept__icon dept__icon--blue"></i> Pediatrics</h3>
+            <p class="dept__desc">Child and adolescent healthcare services</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=michael-lee">Dr. Michael Lee</a></h4>
+                <span>Pediatrician</span>
+                <p>16+ years, well-child checkups & immunizations</p>
+                <a href="doctor.html?id=michael-lee" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=hana-lopez">Dr. Hana Lopez</a></h4>
+                <span>Pediatric Allergist</span>
+                <p>10+ years, focus on allergies & asthma</p>
+                <a href="doctor.html?id=hana-lopez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=james-wright">Dr. James Wright</a></h4>
+                <span>Pediatric Endocrinologist</span>
+                <p>12+ years, specializes in growth & diabetes in children</p>
+                <a href="doctor.html?id=james-wright" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=priya-sharma">Dr. Priya Sharma</a></h4>
+                <span>Pediatric Gastroenterologist</span>
+                <p>9+ years, digestive health in children</p>
+                <a href="doctor.html?id=priya-sharma" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=david-brown">Dr. David Brown</a></h4>
+                <span>Neonatologist</span>
+                <p>14+ years, newborn & infant care</p>
+                <a href="doctor.html?id=david-brown" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=anna-kowalski">Dr. Anna Kowalski</a></h4>
+                <span>Pediatric Cardiologist</span>
+                <p>11+ years, treats heart conditions in children</p>
+                <a href="doctor.html?id=anna-kowalski" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dermatology -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Dermatologist examining patient" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-hand-dots dept__icon dept__icon--green"></i> Dermatology</h3>
+            <p class="dept__desc">Skin, hair, and nail treatments</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=aisha-rahman">Dr. Aisha Rahman</a></h4>
+                <span>Dermatologist</span>
+                <p>13+ years, acne, eczema & skin conditions</p>
+                <a href="doctor.html?id=aisha-rahman" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=david-kim">Dr. David Kim</a></h4>
+                <span>Cosmetic Dermatologist</span>
+                <p>10+ years, skin rejuvenation & aesthetics</p>
+                <a href="doctor.html?id=david-kim" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=sarah-johnson-derm">Dr. Sarah Johnson</a></h4>
+                <span>Pediatric Dermatologist</span>
+                <p>9+ years, skin conditions in children</p>
+                <a href="doctor.html?id=sarah-johnson-derm" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=mark-thompson">Dr. Mark Thompson</a></h4>
+                <span>Dermatopathologist</span>
+                <p>15+ years, specializes in skin cancer diagnosis</p>
+                <a href="doctor.html?id=mark-thompson" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=nina-patel">Dr. Nina Patel</a></h4>
+                <span>Hair & Scalp Specialist</span>
+                <p>8+ years, hair loss & scalp disorders</p>
+                <a href="doctor.html?id=nina-patel" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Orthopedics -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Orthopedic surgeon reviewing X-ray" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-bone dept__icon dept__icon--blue"></i> Orthopedics</h3>
+            <p class="dept__desc">Bones, joints, and musculoskeletal care</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=james-miller">Dr. James Miller</a></h4>
+                <span>Orthopedic Surgeon</span>
+                <p>17+ years, joint replacement & fracture care</p>
+                <a href="doctor.html?id=james-miller" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card doctor-card--booked">
+                <h4><a href="doctor.html?id=julia-chen">Dr. Julia Chen</a></h4>
+                <span>Sports Medicine Specialist</span>
+                <p>11+ years, focus on sports-related injuries</p>
+                <a href="#" class="btn btn-primary btn-sm">Appointment Booked</a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=kevin-rodriguez">Dr. Kevin Rodriguez</a></h4>
+                <span>Spine Specialist</span>
+                <p>14+ years, specializes in back & spinal conditions</p>
+                <a href="doctor.html?id=kevin-rodriguez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=michelle-davis">Dr. Michelle Davis</a></h4>
+                <span>Pediatric Orthopedist</span>
+                <p>9+ years, specializes in growth & surgery in children</p>
+                <a href="doctor.html?id=michelle-davis" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=thomas-wilson">Dr. Thomas Wilson</a></h4>
+                <span>Podiatrist</span>
+                <p>12+ years, foot and ankle care</p>
+                <a href="doctor.html?id=thomas-wilson" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Gynecology -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Gynecologist smiling" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-venus dept__icon dept__icon--pink"></i> Gynecology & Women's Health</h3>
+            <p class="dept__desc">Women's reproductive health, pregnancy, wellness care</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=maria-gonzalez">Dr. Maria Gonzalez</a></h4>
+                <span>Gynecologist</span>
+                <p>15+ years, general reproductive health</p>
+                <a href="doctor.html?id=maria-gonzalez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=rachel-evans">Dr. Rachel Evans</a></h4>
+                <span>Obstetrician</span>
+                <p>13+ years, prenatal & delivery care</p>
+                <a href="doctor.html?id=rachel-evans" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=amanda-taylor">Dr. Amanda Taylor</a></h4>
+                <span>Reproductive Endocrinologist</span>
+                <p>10+ years, fertility & hormone care</p>
+                <a href="doctor.html?id=amanda-taylor" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=stephanie-lee">Dr. Stephanie Lee</a></h4>
+                <span>Gynecologic Oncologist</span>
+                <p>14+ years, specializes in gynecologic cancers</p>
+                <a href="doctor.html?id=stephanie-lee" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=fatima-hassan">Dr. Fatima Hassan</a></h4>
+                <span>Menopause Specialist</span>
+                <p>12+ years, focus on menopause & midlife care</p>
+                <a href="doctor.html?id=fatima-hassan" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Diagnostics -->
+        <article class="dept">
+          <div class="dept__media"><img src="assets/images/hero-doctor.jpg" alt="Radiologist with imaging scans" loading="lazy" /></div>
+          <div class="dept__content">
+            <h3><i class="fa-solid fa-magnifying-glass-chart dept__icon dept__icon--teal"></i> Diagnostics & Lab Testing</h3>
+            <p class="dept__desc">Lab tests and imaging services</p>
+            <span class="dept__label">Doctors</span>
+            <div class="dept__doctors">
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=oliver-grant">Dr. Oliver Grant</a></h4>
+                <span>Radiologist</span>
+                <p>16+ years, diagnostic imaging specialist</p>
+                <a href="doctor.html?id=oliver-grant" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=noor-fatima">Dr. Noor Fatima</a></h4>
+                <span>Pathologist</span>
+                <p>11+ years, lab analysis & diagnostics</p>
+                <a href="doctor.html?id=noor-fatima" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=carlos-mendez">Dr. Carlos Mendez</a></h4>
+                <span>Nuclear Medicine Physician</span>
+                <p>13+ years, PET & nuclear imaging</p>
+                <a href="doctor.html?id=carlos-mendez" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=helen-wang">Dr. Helen Wang</a></h4>
+                <span>Interventional Radiologist</span>
+                <p>10+ years, image-guided procedures</p>
+                <a href="doctor.html?id=helen-wang" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="doctor-card">
+                <h4><a href="doctor.html?id=richard-clark">Dr. Richard Clark</a></h4>
+                <span>Clinical Lab Director</span>
+                <p>18+ years, quality & lab operations</p>
+                <a href="doctor.html?id=richard-clark" class="btn btn-outline btn-sm">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- How telehealth works -->
+    <section class="th-steps">
+      <div class="container">
+        <h2 class="th-section-title">How Our Telehealth Works</h2>
+
+        <div class="th-steps__grid">
+          <div class="th-step">
+            <div class="th-step__icon"><i class="fa-solid fa-user-plus"></i></div>
+            <h3>Sign up & create your patient profile</h3>
+          </div>
+          <div class="th-step">
+            <div class="th-step__icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <h3>Select department or doctor</h3>
+          </div>
+          <div class="th-step">
+            <div class="th-step__icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3>Choose telehealth or in-person appointment</h3>
+          </div>
+          <div class="th-step">
+            <div class="th-step__icon"><i class="fa-solid fa-credit-card"></i></div>
+            <h3>Confirm & pay securely</h3>
+          </div>
+          <div class="th-step">
+            <div class="th-step__icon"><i class="fa-solid fa-display"></i></div>
+            <h3>Meet your doctor online or at the clinic</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="th-why">
+      <div class="container">
+        <h2 class="th-section-title">Why Choose UpCare Mediconnect</h2>
+
+        <div class="th-why__grid">
+          <div class="th-why-card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>Licensed & verified specialists</h3>
+          </div>
+          <div class="th-why-card">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Secure, HIPAA-compliant telehealth</h3>
+          </div>
+          <div class="th-why-card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>Easy scheduling and reminders</h3>
+          </div>
+          <div class="th-why-card">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Insurance accepted</h3>
+          </div>
+          <div class="th-why-card">
+            <i class="fa-solid fa-language"></i>
+            <h3>Multilingual support</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="th-cta">
+      <div class="container th-cta__inner">
+        <h2>Your health is our priority. Book your next appointment today with trusted doctors across specialties.</h2>
+        <a href="#departments" class="btn btn-white btn-lg">Sign Up & Book Care</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="navbar__logo">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <span><span class="logo-highlight">UpCare</span> <span class="logo-rest">Mediconnect</span></span>
+        </a>
+        <p>One platform for every care you need. AI-powered healthcare for families, seniors, children, and individuals.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="telehealth.html">Healthcare & Telehealth</a></li>
+          <li><a href="index.html#services">Mental Health</a></li>
+          <li><a href="index.html#services">Childcare & ABA</a></li>
+          <li><a href="index.html#services">Homecare</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">HIPAA Compliance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Login / Sign Up</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">24/7 Support</a></li>
+          <li><a href="#">Emergency Care</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 UpCare Mediconnect. All rights reserved.</p>
+        <div class="footer__badges">
+          <span class="chip">HIPAA Compliant</span>
+          <span class="chip">AI-Powered</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
