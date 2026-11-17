@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adult and in-home care at UpCare Mediconnect: licensed nurses, senior care, post-op recovery and daily-living support across New York." />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Adult &amp; Home Care | UpCare Mediconnect</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/telehealth.css" />
+  <link rel="stylesheet" href="css/home-care.css" />
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-ambulance" viewBox="0 0 24 24"><path d="M10 10H6" /><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><pathd="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14" /><path d="M8 8v4" /><path d="M9 18h6" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></symbol>
+    <symbol id="i-baby" viewBox="0 0 24 24"><path d="M9 12h.01" /><path d="M15 12h.01" /><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" /><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" /></symbol>
+    <symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-bone" viewBox="0 0 24 24"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" /></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" /><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" /><path d="M17.599 6.5a3 3 0 0 0 .399-1.375" /><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /><path d="M3.477 10.896a4 4 0 0 1 .585-.396" /><path d="M19.938 10.5a4 4 0 0 1 .585.396" /><path d="M6 18a4 4 0 0 1-1.967-.516" /><path d="M19.967 17.484A4 4 0 0 1 18 18" /></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="m9 16 2 2 4-4" /></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></symbol>
+    <symbol id="i-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></symbol>
+    <symbol id="i-heart-pulse" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></symbol>
+    <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6" /><path d="m4 14 6-6 2-3" /><path d="M2 5h12" /><path d="M7 2h1" /><path d="m22 22-5-10-5 10" /><path d="M14 18h6" /></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" x2="12" y1="19" y2="22" /></symbol>
+    <symbol id="i-microscope" viewBox="0 0 24 24"><path d="M6 18h8" /><path d="M3 22h18" /><path d="M14 22a7 7 0 1 0 0-14h-1" /><path d="M9 14h2" /><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" /><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" /></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" /></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+    <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /><path d="m8.5 8.5 7 7" /></symbol>
+    <symbol id="i-scan-face" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><path d="M9 9h.01" /><path d="M15 9h.01" /></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M11 2v2" /><path d="M5 2v2" /><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /><path d="M8 15a6 6 0 0 0 12 0v-3" /><circle cx="20" cy="10" r="2" /></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24"><path d="m18 2 4 4" /><path d="m17 7 3-3" /><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" /><path d="m9 11 4 4" /><path d="m5 19-3 3" /><path d="m14 4 6 6" /></symbol>
+    <symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" x2="19" y1="8" y2="14" /><line x1="22" x2="16" y1="11" y2="11" /></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" /></symbol>
+    <symbol id="i-cloud-rain" viewBox="0 0 24 24"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2" /><path d="M16 14v6" /><path d="M8 14v6" /><path d="M12 16v6" /></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" x2="9.01" y1="9" y2="9" /><line x1="15" x2="15.01" y1="9" y2="9" /></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" /><path d="M9.6 4.6A2 2 0 1 1 11 8H2" /><path d="M12.6 19.4A2 2 0 1 0 14 16H2" /></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5 2.3a.6.6 0 0 1 1 0l2.6 5.4 5.9.8a.6.6 0 0 1 .3 1l-4.3 4.2 1 5.9a.6.6 0 0 1-.8.6L12 17.4l-5.3 2.8a.6.6 0 0 1-.8-.6l1-5.9-4.3-4.2a.6.6 0 0 1 .3-1l5.9-.8z" /></symbol>
+  </svg>
+
+  <svg width="0" height="0" class="sprite sprite--custom" aria-hidden="true" focusable="false">
+    <symbol id="s-heart" viewBox="0 0 32 32"><path d="M16 24c-.4 0-.8-.15-1.1-.43-1.5-1.35-2.9-2.55-4.15-3.6C7.2 17.1 5 15.25 5 12.4 5 10 6.9 8.1 9.3 8.1c1.4 0 2.75.65 3.6 1.7l3.1 3.65 3.1-3.65c.85-1.05 2.2-1.7 3.6-1.7 2.4 0 4.3 1.9 4.3 4.3 0 2.85-2.2 4.7-5.75 7.57-1.25 1.05-2.65 2.25-4.15 3.6-.3.28-.7.43-1.1.43z" /></symbol>
+    <symbol id="s-signal" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" /><rect x="5" y="5.5" width="3" height="6.5" rx="1" /><rect x="10" y="3" width="3" height="9" rx="1" /><rect x="15" y="0" width="3" height="12" rx="1" /></symbol>
+    <symbol id="s-wifi" viewBox="0 0 16 12"><path d="M8 2.6c2.3 0 4.4.9 6 2.4l1.2-1.3A10.5 10.5 0 0 0 8 .8 10.5 10.5 0 0 0 .8 3.7L2 5c1.6-1.5 3.7-2.4 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.7 6.7 0 0 0 8 4.4c-1.8 0-3.4.7-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c-.5 0-1 .2-1.3.5L8 11.5l1.3-1.3c-.3-.3-.8-.5-1.3-.5Z" /></symbol>
+    <symbol id="s-battery" viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4" /><rect x="2" y="2" width="20" height="8" rx="2" /><path d="M25 4v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2Z" opacity=".45" /></symbol>
+  </svg>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+        <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+        <span class="logo__word">UpCare</span>
+      </a>
+
+      <nav class="navbar__menu" id="navbarMenu" aria-label="Primary">
+        <ul class="nav__links">
+          <li class="navbar__dropdown">
+            <button type="button" class="navbar__dropdown-toggle" aria-expanded="false" aria-controls="servicesMenu">
+              Services <svg class="icon dropdown-icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+            </button>
+            <ul class="navbar__dropdown-menu" id="servicesMenu">
+              <li><a href="telehealth.html"><strong>Primary care &amp; telehealth</strong><span>Check-ups, sick visits, prescriptions</span></a></li>
+              <li><a href="mental-health.html"><strong>Therapy &amp; mental health</strong><span>Weekly sessions by video</span></a></li>
+              <li><a href="home-care.html" aria-current="page"><strong>Home care</strong><span>Support for parents at home</span></a></li>
+              <li><a href="index.html#services"><strong>Childcare &amp; ABA therapy</strong><span>For little ones and kids who learn differently</span></a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#home-visits">Home visits</a></li>
+          <li><a href="index.html#nurse">Nurse line</a></li>
+          <li><a href="index.html#stories">Reviews</a></li>
+          <li>
+            <a href="ai-assistant.html" class="nav__ai">
+              <svg class="icon" aria-hidden="true"><use href="#i-bot" /></svg> AI Assistant
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="#" class="btn btn--ghost">Log in</a>
+          <a href="index.html#book" class="btn btn--primary">Book a visit</a>
+        </div>
+      </nav>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Open menu" aria-controls="navbarMenu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero hc-hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal>In-home &amp; adult care</p>
+          <h1 class="hero__title" data-reveal>Care that feels like <span class="hc-accent">home.</span></h1>
+          <p class="hero__lede" data-reveal>
+            Compassionate, professional care for adults and seniors, delivered at home. From chronic condition
+            management to post-op recovery and daily-living support, we help your loved ones stay safe, comfortable and independent.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a href="#programs" class="btn btn--primary btn--lg">Book a caregiver <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+            <a href="tel:+12125550147" class="btn btn--secondary btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg> Talk to our care team</a>
+          </div>
+          <ul class="tele-hero__points" data-reveal>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check" /></svg> Licensed nurses</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check" /></svg> 24/7 support</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check" /></svg> Family portal</li>
+          </ul>
+        </div>
+
+        <div class="hc-visual" data-reveal>
+          <img src="assets/images/hand-in-hand.jpg" alt="A caregiver holding an older woman's hand at home" width="1200" height="1200" />
+          <div class="float-note hc-note hc-note--top" aria-hidden="true">
+            <span class="float-note__icon"><svg class="icon"><use href="#i-clock" /></svg></span>
+            <div><strong>24/7 on-call</strong><span>Always reachable</span></div>
+          </div>
+          <div class="float-note hc-note hc-note--bottom" aria-hidden="true">
+            <span class="float-note__icon float-note__icon--green"><svg class="icon"><use href="#i-star" /></svg></span>
+            <div><strong>4.9 / 5 rating</strong><span>From 1,200+ families</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key numbers -->
+    <section class="numbers" aria-label="Home care at a glance">
+      <div class="container">
+        <dl class="numbers__row">
+          <div><dt>Families served</dt><dd>1,200+</dd></div>
+          <div><dt>Average response time</dt><dd>&lt;30 min</dd></div>
+          <div><dt>Languages · EN, ES, BN, HI</dt><dd>4</dd></div>
+          <div><dt>Satisfaction rate</dt><dd>98%</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Who we help -->
+    <section class="section" id="who">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>Who we help</p>
+          <h2 class="section__title" data-reveal>Built around the people who matter most</h2>
+          <p class="section__sub" data-reveal>Whatever stage of care you're in, our team designs a plan that fits real life.</p>
+        </div>
+        <ul class="care-grid">
+          <li class="care-card hc-card" data-reveal>
+            <span class="care-card__icon care-card__icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+            <h3>Seniors aging at home</h3>
+            <p>Companionship, safety monitoring and daily-living support so loved ones stay independent.</p>
+            <a href="#programs" class="hc-link" data-tab="senior">Explore care <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </li>
+          <li class="care-card hc-card" data-reveal>
+            <span class="care-card__icon care-card__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope" /></svg></span>
+            <h3>Adults recovering from surgery</h3>
+            <p>Skilled nurses for wound care, IV therapy and faster recovery in familiar surroundings.</p>
+            <a href="#programs" class="hc-link" data-tab="postop">Explore care <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </li>
+          <li class="care-card hc-card" data-reveal>
+            <span class="care-card__icon care-card__icon--rose"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse" /></svg></span>
+            <h3>Families managing chronic care</h3>
+            <p>Coordinated plans for diabetes, hypertension and long-term conditions, with shared logs.</p>
+            <a href="#programs" class="hc-link" data-tab="adult">Explore care <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section class="section how" id="programs">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>Our care services</p>
+          <h2 class="section__title" data-reveal>Pick the care that fits</h2>
+          <p class="section__sub" data-reveal>Four focused programs, one trusted team.</p>
+        </div>
+
+        <div class="hc-tabs" role="tablist" aria-label="Care programs" data-reveal>
+          <button type="button" class="hc-tab" role="tab" id="tab-adult" aria-controls="panel-adult" aria-selected="true"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope" /></svg> Adult care</button>
+          <button type="button" class="hc-tab" role="tab" id="tab-home" aria-controls="panel-home" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-home" /></svg> Home care</button>
+          <button type="button" class="hc-tab" role="tab" id="tab-senior" aria-controls="panel-senior" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg> Senior care</button>
+          <button type="button" class="hc-tab" role="tab" id="tab-postop" aria-controls="panel-postop" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse" /></svg> Post-op recovery</button>
+        </div>
+
+        <div class="hc-panel" role="tabpanel" id="panel-adult" aria-labelledby="tab-adult" tabindex="0">
+          <img src="assets/images/window.jpg" alt="" width="1200" height="800" loading="lazy" />
+          <div>
+            <h3>Adult care</h3>
+            <p>Daily living support for adults managing chronic or recovery needs.</p>
+            <ul class="hc-checks">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Chronic condition management</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Medication administration &amp; reminders</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Skilled nursing visits</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Daily health logs shared with family</li>
+            </ul>
+            <a href="index.html#book" class="btn btn--primary">Book this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </div>
+        </div>
+        <div class="hc-panel" role="tabpanel" id="panel-home" aria-labelledby="tab-home" tabindex="0" hidden>
+          <img src="assets/images/stoop.jpg" alt="" width="1200" height="800" loading="lazy" />
+          <div>
+            <h3>Home care</h3>
+            <p>Practical, hands-on help that keeps the household running smoothly.</p>
+            <ul class="hc-checks">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Personal hygiene &amp; bathing help</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Meal preparation &amp; light housekeeping</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Mobility &amp; fall-prevention support</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Errands and appointment escorts</li>
+            </ul>
+            <a href="index.html#book" class="btn btn--primary">Book this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </div>
+        </div>
+        <div class="hc-panel" role="tabpanel" id="panel-senior" aria-labelledby="tab-senior" tabindex="0" hidden>
+          <img src="assets/images/elder-walk.jpg" alt="" width="1200" height="800" loading="lazy" />
+          <div>
+            <h3>Senior care</h3>
+            <p>Companionship and safety for older adults who want to age in place.</p>
+            <ul class="hc-checks">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Companionship &amp; social activities</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Safety monitoring &amp; check-ins</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Memory &amp; dementia support</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Respite care for family caregivers</li>
+            </ul>
+            <a href="index.html#book" class="btn btn--primary">Book this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </div>
+        </div>
+        <div class="hc-panel" role="tabpanel" id="panel-postop" aria-labelledby="tab-postop" tabindex="0" hidden>
+          <img src="assets/images/hero-doctor.jpg" alt="" width="1200" height="1800" loading="lazy" />
+          <div>
+            <h3>Post-op recovery</h3>
+            <p>Skilled nursing at home so recovery is faster, safer and more comfortable.</p>
+            <ul class="hc-checks">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Wound care &amp; dressing changes</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> IV therapy &amp; injections</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Pain management &amp; vitals tracking</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Physical therapy exercises at home</li>
+            </ul>
+            <a href="index.html#book" class="btn btn--primary">Book this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's included -->
+    <section class="section" id="included">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>What's included</p>
+          <h2 class="section__title" data-reveal>Everything your family needs</h2>
+        </div>
+        <ul class="hc-included">
+          <li data-reveal><span class="care-card__icon care-card__icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope" /></svg></span>Licensed in-home nursing care</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-pill" /></svg></span>Medication reminders &amp; management</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--rose"><svg class="icon" aria-hidden="true"><use href="#i-shield-check" /></svg></span>Chronic illness &amp; post-op support</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--amber"><svg class="icon" aria-hidden="true"><use href="#i-home" /></svg></span>Personal hygiene &amp; mobility help</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--violet"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>Elderly companionship &amp; care</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-activity" /></svg></span>At-home physical &amp; speech therapy</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-clipboard" /></svg></span>Daily check-in logs for family</li>
+          <li data-reveal><span class="care-card__icon care-card__icon--amber"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg></span>Family scheduling &amp; coordination</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section how" id="how-home-care">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>Simple process</p>
+          <h2 class="section__title" data-reveal>How it works</h2>
+          <p class="section__sub" data-reveal>Getting care at home shouldn't be complicated.</p>
+        </div>
+        <ol class="tele-steps hc-steps">
+          <li data-reveal><span class="flow__num">1</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg></span><h3>Request care</h3><p>Tell us about your loved one's needs in under 2 minutes.</p></li>
+          <li data-reveal><span class="flow__num">2</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkles" /></svg></span><h3>Get matched</h3><p>We pair you with a vetted caregiver who fits your situation.</p></li>
+          <li data-reveal><span class="flow__num">3</span><span class="tele-steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg></span><h3>Care begins</h3><p>Care starts at home, with daily updates for your family.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="stories">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>Families say</p>
+          <h2 class="section__title" data-reveal>Trusted in homes across New York</h2>
+        </div>
+        <div class="reviews">
+          <figure class="review" data-reveal>
+            <div class="review__stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg></div>
+            <blockquote><p>"The nursing care my father received was exceptional. The daily updates gave our family peace of mind."</p></blockquote>
+            <figcaption><span class="av av--blue" aria-hidden="true">MT</span><div><strong>Michael T.</strong>Family member · Queens</div></figcaption>
+          </figure>
+          <figure class="review" data-reveal>
+            <div class="review__stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg></div>
+            <blockquote><p>"Having professional care at home has been a blessing. Mom gets the support she needs while staying in her familiar environment."</p></blockquote>
+            <figcaption><span class="av av--green" aria-hidden="true">DL</span><div><strong>David L.</strong>Son of client · Brooklyn</div></figcaption>
+          </figure>
+          <figure class="review" data-reveal>
+            <div class="review__stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg><svg class="icon"><use href="#i-star" /></svg></div>
+            <blockquote><p>"The caregiver felt like family from day one. Multilingual support made everything easier for us."</p></blockquote>
+            <figcaption><span class="av av--rose" aria-hidden="true">AR</span><div><strong>Ayesha R.</strong>Daughter &amp; caregiver · the Bronx</div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="book">
+      <div class="container">
+        <div class="cta__panel cta__panel--simple" data-reveal>
+          <div class="cta__copy">
+            <h2>Ready to get started?</h2>
+            <p>Take the first step toward better care today. Our team is ready to help.</p>
+            <div class="cta__actions">
+              <a href="index.html#book" class="btn btn--white btn--lg">Book care now <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+              <a href="#faq" class="btn btn--outline-white btn--lg">Read FAQs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section hc-faq-section" id="faq">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>FAQ</p>
+          <h2 class="section__title" data-reveal>Frequently asked questions</h2>
+        </div>
+        <div class="hc-faq">
+          <details data-reveal><summary>What types of in-home nursing are offered?</summary><p>Skilled nursing visits, wound care, IV therapy, injections, vitals monitoring and chronic condition management, all by licensed nurses.</p></details>
+          <details data-reveal><summary>How are medication reminders managed?</summary><p>Your caregiver gives reminders at each dose and logs it in the family portal, so everyone can see what was taken and when.</p></details>
+          <details data-reveal><summary>What chronic illnesses do you support?</summary><p>Diabetes, hypertension, heart disease, COPD, arthritis, dementia and more, with a care plan built with your doctor.</p></details>
+          <details data-reveal><summary>What personal care assistance is provided?</summary><p>Bathing, dressing, grooming, toileting, mobility help and fall prevention, always with dignity and respect.</p></details>
+          <details data-reveal><summary>How do you support elderly individuals at home?</summary><p>Companionship, safety check-ins, meal help, light housekeeping, appointment escorts and memory support.</p></details>
+          <details data-reveal><summary>What therapies can be done at home?</summary><p>Physical, occupational and speech therapy sessions can all be scheduled at home with licensed therapists.</p></details>
+          <details data-reveal><summary>How does the daily check-in system work?</summary><p>After each visit, the caregiver records vitals, meals, mood and notes. Family members get an update in the app the same day.</p></details>
+          <details data-reveal><summary>Can family members access the care logs?</summary><p>Yes. Invite as many family members as you like to the secure family portal to view logs and message the care team.</p></details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="UpCare Mediconnect, home">
+            <span class="logo__mark"><svg aria-hidden="true"><use href="#s-heart" /></svg></span>
+            <span class="logo__word">UpCare</span>
+          </a>
+          <p>Home and virtual care for New York families, in all five boroughs.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="UpCare on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg></a>
+            <a href="#" aria-label="UpCare on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook" /></svg></a>
+            <a href="#" aria-label="UpCare on LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h2>Care</h2>
+          <ul>
+            <li><a href="telehealth.html">Primary care &amp; telehealth</a></li>
+            <li><a href="mental-health.html">Therapy &amp; mental health</a></li>
+            <li><a href="home-care.html">Home care</a></li>
+            <li><a href="index.html#services">Childcare &amp; ABA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="#">Log in / Sign up</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Insurance we accept</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">HIPAA notice</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__emergency">
+        <svg class="icon" aria-hidden="true"><use href="#i-triangle-alert" /></svg>
+        UpCare is not an emergency service. If you or someone else is in danger, call 911.
+      </p>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 UpCare Mediconnect, New York, NY</p>
+        <p>HIPAA compliant · Licensed in New York</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/home-care.js"></script>
+</body>
+</html>
